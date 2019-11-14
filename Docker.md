@@ -5,9 +5,24 @@
 docker ps
 ```
 
+### Display running and stopped containers
+```
+docker ps -a
+```
+
 ### Run container
 ```
 docker run <id>
+```
+
+### Stop container (preserves state)
+```
+docker stop <id>
+```
+
+### Start container (previously stopped)
+```
+docker start <id>
 ```
 
 ### Mount volume
@@ -28,6 +43,11 @@ docker kill $(docker -q ps)
 ### Publish ports
 ```
 docker run -p <host port>:<container port>[/protocol]
+```
+
+### Run container with interactive terminal
+```
+docker run -it <image>
 ```
 
 ### Run shell in running container
