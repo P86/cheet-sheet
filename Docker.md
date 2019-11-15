@@ -1,4 +1,4 @@
-![logo](https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_%28container_engine%29_logo.png)
+![logo](.\assets\docker.png)
 
 ### Display running containers 
 ```
@@ -87,6 +87,38 @@ ENV <name>=<value>
 ### Set build arg as env variable in Dockerfile
 ```
 ENV <name>=${<arg>}
+```
+
+### Dockerfile good practices:
+- Keep build context small or use dockerignore.
+- Maintain proper instructions order (install dependencies first then copy applicaiton code/binaries).
+- Merge multiple commands (using &&).
+- Remove unnecessary dependencies.
+- Use specific tag for base image.
+- Use multi-stage build.
+
+### Mulit-stage dockerfile
+```dockerfile
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim AS base #use minial image for application hosting
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build #use image contains sdk for build only
+WORKDIR /src 
+COPY ["MyApp/MyApp.csproj", "MyApp/"] #copy .csproj only
+RUN dotnet restore "MyApp/MyApp.csproj" #restore dependencies - this will be cached for future builds
+COPY . . #copy rest of the code
+WORKDIR "/src/MyApp"
+RUN dotnet build "MyApp.csproj" -c Release -o /app/build #build application
+
+FROM build AS publish 
+RUN dotnet publish "MyApp.csproj" -c Release -o /app/publish #publish application to /app/publish
+
+FROM base AS final #use base image declared at the begining
+WORKDIR /app 
+COPY --from=publish /app/publish . #copy binaries from publish stage to WORKDIR
+ENTRYPOINT ["dotnet", "MyApp.dll"] #declare container entry point
 ```
 
 ### Custom repositoty certificates in Linux
