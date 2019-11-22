@@ -1,4 +1,4 @@
-![logo](.\assets\docker.png)
+![logo](./assets/docker.png)
 
 ### Display running containers 
 ```
@@ -88,7 +88,6 @@ ENV <name>=<value>
 ```
 ENV <name>=${<arg>}
 ```
-
 ### Dockerfile good practices:
 - Keep build context small or use dockerignore.
 - Maintain proper instructions order (install dependencies first then copy applicaiton code/binaries).
@@ -135,3 +134,24 @@ docker run -p 80:80/tcp -p 80:80/udp my_app
 In the above example, the first number following the __-p__ flag is the host port, and the second is the container port.
 
 Source: https://medium.freecodecamp.org/expose-vs-publish-docker-port-commands-explained-simply-434593dbc9a3
+
+### Docker's internal DNS
+Docker have internal DNS, so services can communicate using container name but they have to be in the same network and it can't be default network.
+```bash
+#create two containers
+docker run -d --name nginx1 -p 8888:80 nginx
+docker run -d --name nginx2 -p 8889:80 nginx
+
+#create new network
+docker network create nginx-network
+
+#connect containers to network
+docker network connect nginx-network nginx1
+docker network connect nginx-network nginx2
+
+#sh into container
+docker exec -it nginx1 sh
+
+#ping other container (inside container)
+ping nginx2
+```
