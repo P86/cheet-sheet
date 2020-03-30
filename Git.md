@@ -15,6 +15,16 @@ git status
 Options:
 * -sb - short version
 
+### Git revert local changes
+```
+git checkout -f
+```
+
+### Git remove last commit
+```
+git reset --hard HEAD^
+```
+
 ### Switch to branch
 ```
 git checkout <branch>
@@ -30,7 +40,7 @@ git checkout -
 git checkout <branch> -- <file>
 ```
 
-### Create branch from master
+### Create branch from other branch
 ```
 git checkout -b <new branch> <source branch> 
 ```
