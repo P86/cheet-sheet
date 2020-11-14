@@ -22,11 +22,12 @@ General:
 * Names of methods, varialbes are descriptive and informs what they actualy do.
 * Code follows standards accepted by team members.
 * Magic number are assigned to constants with descriptive name.
-* Inconsistency, similar things should be done in smiilar way.
+* Code is consistent, similar things should be done in smiilar way.
+* Added or modified files are organized correctly.
 * Code is in proper layer eg. no data base access code in service layer.
 * Functions are doing single thing.
-* Code is in same abstraction level in single method.
-* Classes, modules are loosely coupled.
+* Logic in method is on same abstraction level.
+* Classes, modules are loosely coupled, and dependencies between calsses are minimized.
 * Any part of code can't be replaced by library function.
 * Code follows SOLID principles.
 * Is written with performance in mind (if that's a real concern for your application).
@@ -38,5 +39,5 @@ API:
 * Input parameters are validated, not only query parameters but models also.
 * Correct HTTP method is used.
 * URL follows REST API standards.
-* Sensitive data is not passed in query string like passwords.
+* Sensitive data is not passed in query string eg. passwords.
 * Async/Await is used and execution will not block thread.
