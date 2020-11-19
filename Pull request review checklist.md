@@ -41,3 +41,6 @@ API:
 * URL follows REST API standards.
 * Sensitive data is not passed in query string eg. passwords.
 * Async/Await is used and execution will not block thread.
+
+Angular:
+* Unsubscribe is always called on infinite observables.
