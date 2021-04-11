@@ -20,6 +20,11 @@ Options:
 git checkout -f
 ```
 
+### Clean recusively untracked files
+```
+git clean -df
+```
+
 ### Git remove last commit
 ```
 git reset --hard HEAD^
