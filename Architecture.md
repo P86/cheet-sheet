@@ -25,6 +25,7 @@ issues and considerations:
 Sources:
 - https://martinfowler.com/bliki/CQRS.html
 - https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
+- https://www.youtube.com/watch?v=Emr4jkhW9L4
 
 ### Modular Monolith
 ### Materialized View
@@ -33,7 +34,6 @@ Sources:
 ### Onion
 ### Hexagonal
 ### Ports and adapters
-
 
 Sources:
 - https://docs.microsoft.com/en-us/azure/architecture/patterns/
