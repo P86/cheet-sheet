@@ -45,6 +45,7 @@ General:
 - [ ] Methods don't have too many arguments or out arguments.
 - [ ] Methods are doing single thing.
 - [ ] Logic in method is on same abstraction level.
+- [ ] There is no nested `if's` instructions when possible - [guard clauses](https://refactoring.guru/replace-nested-conditional-with-guard-clauses) are used instead
 
 API:
 - [ ] Controllers and methods are properly secured.
