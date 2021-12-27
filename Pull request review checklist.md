@@ -11,18 +11,18 @@ Code review:
 Tests:
 - [ ] Tests are implemented and actually check behaviour not implementation details.
 - [ ] Tests check negative scenarios and egde cases.
-- [ ] API tests also check authorizations
+- [ ] API tests also check authorization.
 
 General:
 - [ ] Code follows standards accepted by team members.
-- [ ] Code follows SOLID principles.
+- [ ] Code follows [SOLID](https://en.wikipedia.org/wiki/SOLID) principles.
 - [ ] Exceptions are used properly (used in exceptional situations, handled and logged properly)
 - [ ] Code is written in defensive way eg. possible nulls are checked.
-- [ ] Code is not repeted (DRY).
+- [ ] Code is not repeted ([DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)).
 - [ ] There is no unused, dead or commented code.
 - [ ] There is no unnecessary comments.
 - [ ] Code is consistent, similar things should be done in smiilar way.
-- [ ] Implementation not overcomplicate something for the sake of 'making it future-proof'. (YAGNI)
+- [ ] Implementation not overcomplicate something for the sake of 'making it future-proof'. ([YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it))
 - [ ] Names of methods, varialbes are descriptive and informs what they actualy do.
 - [ ] Variables and methods should be defined close to usage.
 - [ ] Code is self-explanatory.
@@ -42,7 +42,7 @@ API:
 - [ ] Parameters are validated, not only query parameters but models also.
 - [ ] Model validation is done using [attributes](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-6.0#validation-attributes)
 - [ ] Correct HTTP method is used.
-- [ ] URL follows REST API standards.
+- [ ] Follows REST API standards.
 - [ ] Sensitive data is not passed in query string eg. passwords.
 - [ ] Async/Await is used and execution will not block thread.
 
