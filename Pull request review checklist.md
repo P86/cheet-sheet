@@ -6,6 +6,7 @@ Before creating Pull Request:
 - [ ] Do review of your own code and fix problems.
 - [ ] Run tests and don't create PR if tests are not green.
 - [ ] Fix build warrnings and linter errors.
+- [ ] Format code properly (use built in formatting tools).
 
 ### Reviewer
 
