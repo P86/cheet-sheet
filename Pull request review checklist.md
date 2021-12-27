@@ -1,4 +1,13 @@
-# Pull Request review checklist
+# Pull Request checklist
+
+### Author
+
+Before creating Pull Request:
+- [ ] Do review of your own code and fix problems.
+- [ ] Run tests and don't create PR if tests are not green.
+- [ ] Fix build warrnings and linter errors.
+
+### Reviewer
 
 Initial review:
 - [ ] Read description of PBI/Task connected with pull request and understand subject of changes.
@@ -6,23 +15,24 @@ Initial review:
 - [ ] Review changes and try to figure out if provided changes are in scope of PBI/Task.
 - [ ] Run code and use it. If feature is not working don't continue review.
 
-Code review:
+Code review
 
 Tests:
 - [ ] Tests are implemented and actually check behaviour not implementation details.
 - [ ] Tests check negative scenarios and egde cases.
 - [ ] API tests also check authorization.
+- [ ] All tests are greeen.
 
 General:
 - [ ] Code follows standards accepted by team members.
-- [ ] Code follows [SOLID](https://en.wikipedia.org/wiki/SOLID) principles.
+- [ ] Code follows [SOLID](https://en.wikipedia.org/wiki/SOLID) principles and [KISS](https://en.wikipedia.org/wiki/KISS_principle) principles.
 - [ ] Exceptions are used properly (used in exceptional situations, handled and logged properly)
 - [ ] Code is written in defensive way eg. possible nulls are checked.
 - [ ] Code is not repeted ([DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)).
 - [ ] There is no unused, dead or commented code.
 - [ ] There is no unnecessary comments.
 - [ ] Code is consistent, similar things should be done in smiilar way.
-- [ ] Implementation not overcomplicate something for the sake of 'making it future-proof'. ([YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it))
+- [ ] Implementation not overcomplicate something for the sake of 'making it future-proof'. ([YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)).
 - [ ] Names of methods, varialbes are descriptive and informs what they actualy do.
 - [ ] Variables and methods should be defined close to usage.
 - [ ] Code is self-explanatory.
@@ -32,7 +42,7 @@ General:
 - [ ] Classes, modules are loosely coupled and dependencies between calsses are minimized.
 - [ ] Any part of code can't be replaced by library function.
 - [ ] Methods don't return nulls if it is not neccessary eg. instead of empty collection.
-- [ ] Methods don't have too many arguments (more than 5 it  or out arguments.
+- [ ] Methods don't have too many arguments or out arguments.
 - [ ] Methods are doing single thing.
 - [ ] Logic in method is on same abstraction level.
 
