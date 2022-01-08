@@ -30,6 +30,11 @@ Built-in value types:
 - tuples ? - decompiler shows that tuple is a class
 - structures
 
+Characteristics:
+- Value equality
+- Allocated on [stack](#stack)
+- Copied when passed to method and returned from method
+
 ## Reference types
 **Variables of reference types store references to their instances**. With reference types, two variables can reference the same object; therefore, operations on one variable can affect the object referenced by the other variable.
 
@@ -56,6 +61,7 @@ Span<int> stackAllocatedMemory = stackalloc int[20];
 A user-defined type can define a custom implicit or explicit conversion from or to another type. Implicit conversions don't require special syntax to be invoked and can occur in a variety of situations, for example, in assignments and methods invocations.
 **Predefined C# implicit conversions always succeed and never throw an exception.** User-defined implicit conversions should **behave in that way** as well. If a custom conversion can throw an exception or lose information, define it as an explicit conversion.
 
+Example:
 ```cs 
 class Name
 {
@@ -99,6 +105,8 @@ This require the same basic steps for implementing equality:
 - Optional but recommended: **Overload the == and != operators**.
 - **Override Object.GetHashCode** so that two objects that have value equality produce the same hash code.
 - Optional: To support definitions for "greater than" or "less than," implement the IComparable<T> interface for your type, and also overload the <= and >= operators.
+
+Example: 
 ```cs
 class Name : IEquatable<Name>
 {
@@ -140,3 +148,8 @@ An operator declaration must satisfy the following rules:
 - A unary operator has one input parameter. A binary operator has two input parameters. In each case, at least one parameter must have type T or T? where T is the type that contains the operator declaration.
 
 For an example see example of [Value equality for class](#value-equality-for-class)
+
+
+## ref, in, out keywords
+
+## exceptions
