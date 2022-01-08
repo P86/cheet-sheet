@@ -33,3 +33,42 @@ Built-in reference types:
 
 ## Task and Task<TResult>
 The Task class represents a single operation that usually executes asynchronously. Work performed by a Task object typically executes asynchronously on a thread pool thread rather than synchronously on the main application. thread. Task objects are one of the central components of the [task-based asynchronous pattern](https://docs.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+
+## Stackalloc
+A stackalloc expression allocates a block of memory on the stack. A stack allocated memory block created during the method execution is **automatically discarded when that method returns**. You cannot explicitly free the memory allocated with stackalloc. A stack allocated memory block is not subject to garbage collection and doesn't have to be pinned with a fixed statement. The amount of memory available on the stack is limited. **If you allocate too much memory on the stack, a StackOverflowException is thrown**.
+You don't have to use an unsafe context when you assign a stack allocated memory block to a Span<T> or ReadOnlySpan<T> variable.
+```cs
+Span<int> stackAllocatedMemory = stackalloc int[20];
+```
+
+## Operator overdload
+
+## Custom type casting
+A user-defined type can define a custom implicit or explicit conversion from or to another type. Implicit conversions don't require special syntax to be invoked and can occur in a variety of situations, for example, in assignments and methods invocations.
+**Predefined C# implicit conversions always succeed and never throw an exception.** User-defined implicit conversions should **behave in that way** as well. If a custom conversion can throw an exception or lose information, define it as an explicit conversion.
+
+```cs 
+class Name
+{
+    public string? First { get; init; }
+    public string? Last { get; init; }
+
+    public Name(string fullName)
+    {
+        var splitted = fullName.Split(" ");
+        First = splitted[0];
+        Last = splitted[1];
+    }
+
+    public static implicit operator Name(string name) => new Name(name);
+    public static explicit operator string(Name name) => $"{name.First} {name.Last}";
+}
+```
+Implicit cast:
+```cs
+Name name = "Arek Piznal";
+```
+Explicit cast:
+```cs
+string name = (string)new Name("Arek Piznal");
+```
