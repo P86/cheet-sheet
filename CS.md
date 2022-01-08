@@ -10,6 +10,7 @@
 - [Custom type casting](#custom-type-casting)
 - [Value equality for class](#value-equality-for-class)
 - [Operator overdload](#operator-overdload)
+- [Disposing objects](#disposing-objects)
 
 ## Stack
 The "stack" is a serially-addressed area of memory that is partially automatically managed for you by the CPU. Also a stack is an array or list structure of function calls and parameters used in modern computer programming and CPU architecture.
@@ -149,7 +150,65 @@ An operator declaration must satisfy the following rules:
 
 For an example see example of [Value equality for class](#value-equality-for-class)
 
+## Disposing objects
+Implementing the Dispose method is primarily for **releasing unmanaged resources**. There are additional reasons for implementing Dispose, for example, to free memory that was allocated, remove an item that was added to a collection, or signal the release of a lock that was acquired. The pattern for disposing an object, referred to as the **dispose pattern**, imposes order on the lifetime of an object. The dispose pattern is used for objects that implement the **IDisposable interface**, and is common when interacting with **file and pipe handles, registry handles, wait handles, or pointers to blocks of unmanaged memory**. This is because the garbage collector is unable to reclaim unmanaged objects. To help ensure that resources are always cleaned up appropriately, a **Dispose method should be idempotent**, such that it is callable multiple times **without throwing an exception**. Furthermore, subsequent invocations of Dispose should do nothing.
+
+**Dispose** method is called when it is no longer needed (**by a consumer** of the type), its purpose is to **free unmanaged resources, perform general cleanup, and to indicate that the finalizer, if one is present, doesn't have to run**. The Dispose method performs all object cleanup, so the garbage collector no longer needs to call the objects' Object.Finalize override. Therefore, the call to the SuppressFinalize method prevents the garbage collector from running the finalizer. If the type has no finalizer, the call to GC.SuppressFinalize has no effect. Note that the actual cleanup is performed by the Dispose(bool) method overload.
+
+In **Dispose(bool) method** the disposing parameter is a Boolean that indicates whether the method call comes from a **Dispose method (its value is true) or from a finalizer (its value is false)**.
+The body of the method consists of three blocks of code:
+- A block for conditional return if object is already disposed.
+- A block that **frees unmanaged resources**. This block executes regardless of the value of the disposing parameter.
+- A conditional block that frees managed resources. This block executes if the value of disposing is true. The managed resources that it frees can include:
+    - Managed objects that implement IDisposable. The conditional block can be used to call their Dispose implementation (cascade dispose). 
+    - Managed objects that consume large amounts of memory or consume scarce resources. Assign large managed object references to null to make them more likely to be unreachable. This releases them faster than if they were reclaimed non-deterministically.
+
+**If the method call comes from a finalizer, only the code that frees unmanaged resources should execute**. The implementer is responsible for ensuring that the false path doesn't interact with managed objects that may have been disposed. This is important because the order in which the garbage collector disposes managed objects during finalization is non-deterministic.
+
+```
+The disposing parameter should be false when called from a finalizer, and true when called from the IDisposable.Dispose method. In other words, it is true when deterministically called and false when non-deterministically called.
+```
+
+Example:
+```cs
+class DisposableType : IDisposable
+{
+    private bool _disposed;
+
+    ~DisposableType() => Dispose(false); //finalizer - always call Dispose with false
+
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (_disposed)
+        {
+            return;
+        }
+
+        if (disposing)
+        {
+            //dispose managed state (managed objects).
+        }
+
+        //free unmanaged resources (unmanaged objects) and override a finalizer below.
+        //set large fields to null.
+        _disposed = true;
+    }
+}
+```
+
 
 ## ref, in, out keywords
 
 ## exceptions
+
+## Garbage collector
+
+## Generics
+
+## Boxing
