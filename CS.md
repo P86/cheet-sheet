@@ -11,6 +11,7 @@
 - [Value equality for class](#value-equality-for-class)
 - [Operator overdload](#operator-overdload)
 - [Disposing objects](#disposing-objects)
+- [Parameter keywords](#parameter-keywords)
 
 ## Stack
 The "stack" is a serially-addressed area of memory that is partially automatically managed for you by the CPU. Also a stack is an array or list structure of function calls and parameters used in modern computer programming and CPU architecture.
@@ -201,9 +202,45 @@ class DisposableType : IDisposable
     }
 }
 ```
+## [Parameter keywords](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters)
 
+### [ref](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref) 
+The ref keyword indicates that a **value is passed by reference**. 
+It is used in four different contexts:
+- In a method signature and in a method call, to pass an argument to a method by reference.
+- In a method signature, to return a value to the caller by reference.
+- In a member body, to indicate that a reference return value is stored locally as a reference that the caller intends to modify. Or to indicate that a local variable accesses another value by reference.
+- In a struct declaration, to declare a ref struct or a readonly ref struct.
 
-## ref, in, out keywords
+When used in a method's parameter list, the ref keyword indicates that an **argument is passed by reference, not by value**. The ref keyword makes the formal parameter an alias for the argument, **which must be a variable**. In other words, any operation on the parameter is made on the argument.
+```cs
+static void Increment(ref int v)
+{
+    v = v + 1;
+}
+```
+
+Reference return values (or ref returns) are values that a **method returns by reference to the caller**. That is, the caller can modify the value returned by a method, and that change is reflected in the state of the object in the calling method.
+```cs
+static ref int Find(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        if (array[i] == 1)
+            return ref array[i];
+    
+    throw new InvalidOperationException("Not found");
+}
+```
+
+A ref local variable is used to refer to values returned using return ref. A ref local variable cannot be initialized to a non-ref return value. In other words, the right-hand side of the initialization must be a reference. Any modifications to the value of the ref local are reflected in the state of the object whose method returned the value by reference.
+```cs
+ref int result = ref Find(new int[] { 1, 3, 5, 7, 9 });
+```
+
+### [out](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)
+
+### [in](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/in-parameter-modifier)
+
 
 ## exceptions
 
