@@ -22,7 +22,7 @@ Tests:
 - [ ] Tests are implemented and actually check behaviour not implementation details.
 - [ ] Tests check negative scenarios and egde cases.
 - [ ] API tests also check authorization.
-- [ ] All tests are greeen.
+- [ ] All tests pass.
 
 General:
 - [ ] Code follows standards accepted by team members.
@@ -38,14 +38,10 @@ General:
 - [ ] Variables and methods should be defined close to usage.
 - [ ] Code is self-explanatory.
 - [ ] Magic number are assigned to constants with descriptive name.
-- [ ] Files are organized correctly. Are in proper folder and namespace.
 - [ ] Code is in proper layer eg. no database access code in service or presentation layer.
 - [ ] Classes, modules are loosely coupled and dependencies between calsses are minimized.
-- [ ] Any part of code can't be replaced by library function.
 - [ ] Methods don't return nulls if it is not neccessary eg. instead of empty collection.
 - [ ] Methods don't have too many arguments or out arguments.
-- [ ] Methods are doing single thing.
-- [ ] Logic in method is on same abstraction level.
 - [ ] There is no nested `if's` instructions when possible - [guard clauses](https://refactoring.guru/replace-nested-conditional-with-guard-clauses) are used instead
 
 API:
