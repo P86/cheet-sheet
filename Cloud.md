@@ -46,3 +46,37 @@ Examples:
 
 !!! IMAGE HERE
 
+## Types of cloud
+
+### Public
+Characteristics:
+- The cloud is set up in the public network. 
+- Managed by large companies. 
+- Accessible through the internet. 
+- Available to all clients and users. 
+- Clients have no access to underlying infrastructure.
+
+Examples: Azure, AWS, GCP
+
+Private
+Characteristics:
+- Set up in a organization's premises.
+- Managed by the organization's IT team.
+- Accessible only in the organization's network.
+- Available to users from the organization.
+- Ues private cloud infrastructure and engines.
+- Contains subset of the public cloud capabilities
+
+Examples: vmware cloud, RedHat Openshift, Azure Stack
+
+Hybrid
+characteristics:
+- A cloud setup in a organization's premises...
+- ...but also connected to the public cloud.
+- Workload can be separated between two clouds.
+- Sensitive data in the organization's premises, public data in the public cloud.
+- Usually managed by the public cloud, but not always.
+
+Examples: Azure Arc and AWS Outposts
+
+
