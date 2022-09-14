@@ -58,7 +58,7 @@ Characteristics:
 
 Examples: Azure, AWS, GCP
 
-Private
+### Private
 Characteristics:
 - Set up in a organization's premises.
 - Managed by the organization's IT team.
@@ -69,8 +69,8 @@ Characteristics:
 
 Examples: vmware cloud, RedHat Openshift, Azure Stack
 
-Hybrid
-characteristics:
+### Hybrid
+Characteristics:
 - A cloud setup in a organization's premises...
 - ...but also connected to the public cloud.
 - Workload can be separated between two clouds.
@@ -79,4 +79,7 @@ characteristics:
 
 Examples: Azure Arc and AWS Outposts
 
+## Cloud providers
+Companies which build datacenters and provide public cloud.
 
+Examples: Microsoft Azure, Amazon AWS, Google GCP
