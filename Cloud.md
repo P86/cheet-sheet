@@ -34,5 +34,15 @@ The cloud provides platform for running apps:
 
 Client just needs to bring the code to run.
 
+Example:
+- Web Apps
+
 ### SaaS (Software as a Service):
+A software running completely in the could.
+
+
+Examples:
+- Office 365, salesforce
+
+!!! IMAGE HERE
 
