@@ -107,4 +107,5 @@ Contains the various resources you provsion in cloud ie. virtual machines, datab
 An identity with access to resources in the subscription. Can be attached to a lot of subscription.
 
 ### Resource group 
-A container that holds related resources for Azure solution
+A container that holds related resources for Azure solution. Is assigned to subscription and region.
+
