@@ -97,3 +97,9 @@ Some regions have deisgnated pait region. When a full region fails - the other o
 
 ### Azure Services
 Everything that can be done in cloud is called **Cloud Services** ie. creating virtual machine, setup databases.
+
+### Subscription 
+Contains the various resources you provsion in cloud ie. virtual machines, databases. On subscription can be attached to multiple accounts ie. company subscrption.
+
+### Account
+An identity with access to resources in the subscription. Can be attached to a lot of subscription.
