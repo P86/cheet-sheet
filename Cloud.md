@@ -94,3 +94,6 @@ Some of regions have more than on physical datacenter, each data center is calle
 
 ### Paired regions
 Some regions have deisgnated pait region. When a full region fails - the other one can fill its place. They are set by Azure and cannot be changed.
+
+### Azure Services
+Everything that can be done in cloud is called **Cloud Services** ie. creating virtual machine, setup databases.
