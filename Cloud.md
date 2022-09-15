@@ -83,3 +83,14 @@ Examples: Azure Arc and AWS Outposts
 Companies which build datacenters and provide public cloud.
 
 Examples: Microsoft Azure, Amazon AWS, Google GCP
+
+# Azure
+
+### Regions 
+Azure have a lot of datacenters and each of this datacenter is called **Rregion**.
+
+### Zones
+Some of regions have more than on physical datacenter, each data center is called **Zone**. When there are more than one datacenter in a region. that region is said to have **Availability Zone**
+
+### Paired regions
+Some regions have deisgnated pait region. When a full region fails - the other one can fill its place. They are set by Azure and cannot be changed.
