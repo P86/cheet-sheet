@@ -1,3 +1,5 @@
+# Cloud in general
+
 CapEx (capital Expense):
 - spend money upfront eg. buing servers
 - not optimal
@@ -103,3 +105,6 @@ Contains the various resources you provsion in cloud ie. virtual machines, datab
 
 ### Account
 An identity with access to resources in the subscription. Can be attached to a lot of subscription.
+
+### Resource group 
+A container that holds related resources for Azure solution
