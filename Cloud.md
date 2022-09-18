@@ -115,3 +115,28 @@ An identity with access to resources in the subscription. Can be attached to a l
 ### Resource group 
 A container that holds related resources for Azure solution. Is assigned to subscription and region.
 
+### Mangement groups 
+A place to manage subscriptions.
+
+### Storage account 
+Used to store almost anything in Azure. Is used transparently by various services. Usually is used to store database backups, VM disks, diagnostincs data. Is extreamly cheap so can be used extensivly.
+
+### Service Level Agreement (SLA)
+Is uptime % of a cloud service. To get actual SLA of system, multiply the SLAs of the participating services.
+
+### Cost
+Always check resource's cost before provinsioning. Use Azure calculator to calculate costs.
+
+Pricing models:
+- Per resource (ie. VM)
+- Per compsuntion (ie. Function Apps)
+- Reservations
+
+### Software architects and the cloud
+Cloud systems require in addition (to standard architects knowledge):
+- inrastructure knowledge,
+- security
+- practical knowledge about cloud.
+
+
+
