@@ -91,6 +91,12 @@ Examples: Microsoft Azure, Amazon AWS, Google GCP
 ### Regions 
 Azure have a lot of datacenters and each of this datacenter is called **Rregion**.
 
+What to take under consideration when selectin region:
+- Geograpical proximity to system's audience.
+- Serivces availability (not all services are availabie in all regions).  
+- Availability zones (if there are redundancy requrements, go to region with zoes)
+- Pricing (price of services vary between regions)
+
 ### Zones
 Some of regions have more than on physical datacenter, each data center is called **Zone**. When there are more than one datacenter in a region. that region is said to have **Availability Zone**
 
