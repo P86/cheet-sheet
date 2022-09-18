@@ -138,5 +138,6 @@ Cloud systems require in addition (to standard architects knowledge):
 - security
 - practical knowledge about cloud.
 
-
-
+### Azure compute
+It is set of cloud services for hosting and running applications. Allows uploading your code and then run it. Offers various leves of control and flexibility.
+When taling about azure compute we talk about IaaS nad PaaS.
