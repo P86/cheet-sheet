@@ -141,3 +141,22 @@ Cloud systems require in addition (to standard architects knowledge):
 ### Azure compute
 It is set of cloud services for hosting and running applications. Allows uploading your code and then run it. Offers various leves of control and flexibility.
 When taling about azure compute we talk about IaaS nad PaaS.
+
+### Fault domain
+Logical group of physical hardware that share a common power source and network switch. Basically can be a rack in traditional data center. So ***servers should be spread across more than one fault domain***
+
+### Update domain 
+Logical group of physical hardware that can undergo maintenance and be rebooted at the same time. Maintenance is done by Azure and we don't have control over it. So ***servers should be spread across more than one update domain***
+
+### Availability domain
+Collection of Fault Domains and Update Domains your VMs will be spread across. Can contains up to 3 Fault Domains and up to 20 Update Domains. All domains are located in the same zone.
+
+### Availability zone
+A physically separate zone within an Azure region. Technically a building containing an autonomous data center. each zone functions as fasult and update domain. Provides protection agains a complete zone shutdown. It is free, you don't pay for availability zone
+
+**How to take advantage of availability zone**:
+- deploy indentical VVMs into separate zones in the same region
+- ensure thwy won't be shut down in the same time when zone shuts down
+- deply load balancer to route between the VMs
+
+
