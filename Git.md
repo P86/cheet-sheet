@@ -82,3 +82,19 @@ git log
 Options:
 * -- <file> - changes for single file
 * --pretty=oneline - pretty log 
+
+### Aliases
+Aliases for commands can be added to .gitconfig in user directory (C:\Users\<user nmae\.gitconfig on windows).
+```
+alias.l=log --pretty=oneline --abbrev-commit -30
+alias.lg=log --pretty=oneline --abbrev-commit --graph -30
+alias.s=status --short --branch --ahead-behind
+```
+
+### Cherry pick
+Copy commit or set of commits to current branch.
+```
+git cherry-pick <commit sha>
+git cherry-pick <start commit sha>..<end commit sha>
+```
+  
