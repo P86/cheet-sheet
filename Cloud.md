@@ -165,3 +165,25 @@ It is a PaaS service that allows to deply application and don't care about infra
 App Service Plan it effectively hosting option and also pricing model. You can deply many apps in the same app service plan.  
 App Service Plan allows to chose between pricing tiers. Performance of each tier is described in Azure Compute Units (ACU). ACU is like an index that tells how fast this tier is comparing to other tiers.
 
+
+
+### To excersise
+
+- Virtual machines:
+    - sizes,
+    - disk & network options
+    - connection to machine,
+    - ARM Template,
+    - powershell & bash command
+- Azure App Service:
+    - deployment options,
+    - scaling & autoscaling,
+    - publishing,
+    - deployment slots,
+    - diagnostics,
+    - bash & powershell commands
+- Containers:
+    - container instance,
+    - container registry,
+    - deply to azure web app
+    - deployment,
