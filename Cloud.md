@@ -168,6 +168,28 @@ App Service Plan allows to chose between pricing tiers. Performance of each tier
 ### Function App
 Typically used to run small piecies of code, not complete applications.
 
+### Azure functions
+Characteristics:
+- serverless design, 
+- simple,
+- stateless,
+- short-lived - start, do work, stop,
+- triggered by timer, http request, blob event or message queue,
+- best designed to work asynchronously with other code.
+
+Have timeout about 30 minutes.
+
+### Azure durable functions
+Are designed as extension to existing functions and supprt long running functions.
+Characteristics:
+- statefull,
+- could be long running
+- could be multi step process
+- can be "suspended" while waiting form a long-running API to return (checkpoints)
+- supports complex design patterns,
+- functions can call other functions,
+- make up of a client, orchestrator and activieties
+
 ### To excersise
 
 - Virtual machines:
