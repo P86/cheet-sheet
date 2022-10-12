@@ -190,6 +190,17 @@ Characteristics:
 - functions can call other functions,
 - make up of a client, orchestrator and activieties
 
+Client - the orginal triggered function.
+Orchestrator - the traffic cop.
+Activity - basic unit of work of a function.
+
+Architecture patterns:
+- Function Chaining pattern.
+- Fan out/fan in pattern.
+- Asynchronous API pattern.
+- Monitor pattern.
+- Human interaction pattern. 
+
 ### To excersise
 
 - Virtual machines:
