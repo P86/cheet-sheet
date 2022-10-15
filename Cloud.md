@@ -165,7 +165,41 @@ It is a PaaS service that allows to deply application and don't care about infra
 App Service Plan it effectively hosting option and also pricing model. You can deply many apps in the same app service plan.  
 App Service Plan allows to chose between pricing tiers. Performance of each tier is described in Azure Compute Units (ACU). ACU is like an index that tells how fast this tier is comparing to other tiers.
 
+### Function App
+Typically used to run small piecies of code, not complete applications.
 
+### Azure functions
+Characteristics:
+- serverless design, 
+- simple,
+- stateless,
+- short-lived - start, do work, stop,
+- triggered by timer, http request, blob event or message queue,
+- best designed to work asynchronously with other code.
+
+Have timeout about 30 minutes.
+
+### Azure durable functions
+Are designed as extension to existing functions and supprt long running functions.
+Characteristics:
+- statefull,
+- could be long running
+- could be multi step process
+- can be "suspended" while waiting form a long-running API to return (checkpoints)
+- supports complex design patterns,
+- functions can call other functions,
+- make up of a client, orchestrator and activieties
+
+Client - the orginal triggered function.
+Orchestrator - the traffic cop.
+Activity - basic unit of work of a function.
+
+Architecture patterns:
+- Function Chaining pattern.
+- Fan out/fan in pattern.
+- Asynchronous API pattern.
+- Monitor pattern.
+- Human interaction pattern. 
 
 ### To excersise
 
