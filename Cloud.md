@@ -201,6 +201,9 @@ Architecture patterns:
 - Monitor pattern.
 - Human interaction pattern. 
 
+### Blob storage
+Is basically container option to store files.
+
 ### To excersise
 
 - Virtual machines:
