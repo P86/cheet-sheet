@@ -228,3 +228,6 @@ Is basically container option to store files.
     - standard functions,
     - durable functions,
     - excercise in sandbox (https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/5-add-logic-to-the-function-app?pivots=javascript)   
+
+### Certificates:
+- AZ-204 - [Azure Developer Associate](https://learn.microsoft.com/pl-pl/certifications/azure-developer/)
