@@ -221,3 +221,7 @@ Architecture patterns:
     - container registry,
     - deply to azure web app
     - deployment,
+- Functions app:
+    - standard functions,
+    - durable functions,
+    - excercise in sandbox (https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/5-add-logic-to-the-function-app?pivots=javascript)   
