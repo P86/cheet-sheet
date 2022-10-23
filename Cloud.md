@@ -243,6 +243,9 @@ Data consistency:
 
 Change feed - allows to trigger serverless function when document in cosmos db has changed (dont work on deletion!).
 
+### Blob storage
+Is basically container option to store files.
+
 ### To excersise
 
 - Virtual machines:
@@ -263,3 +266,10 @@ Change feed - allows to trigger serverless function when document in cosmos db h
     - container registry,
     - deply to azure web app
     - deployment,
+- Functions app:
+    - standard functions,
+    - durable functions,
+    - excercise in sandbox (https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/5-add-logic-to-the-function-app?pivots=javascript)   
+
+### Certificates:
+- AZ-204 - [Azure Developer Associate](https://learn.microsoft.com/pl-pl/certifications/azure-developer/)

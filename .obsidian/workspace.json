@@ -1,0 +1,165 @@
+{
+  "main": {
+    "id": "9bdc9ac72d4fcdf4",
+    "type": "split",
+    "children": [
+      {
+        "id": "8938be8b08e390c0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4a65e86f402604c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "7555120fa01ac9de",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.0"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "39dd237384499c57",
+    "type": "split",
+    "children": [
+      {
+        "id": "261aa49a559cbea1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38ecf82208d5c4fc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "17633b91e395cbf1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b957f8b4de6f45f2",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a0b17a0a7c6a7964",
+    "type": "split",
+    "children": [
+      {
+        "id": "83d2d9d9474b25dd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "18f76c8aacd0d540",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Cloud.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "206be778fce9ddd0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Cloud.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9a50644e43028ac0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "dae1d60107120ec6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Cloud.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "4a65e86f402604c2",
+  "lastOpenFiles": [
+    "Philosophy of software design.md",
+    "PowerShell.md",
+    "Clean Code.md",
+    "Cloud.md",
+    "CS.md",
+    "Angular.md",
+    "assets/git.png",
+    "assets/docker.png",
+    "assets/cs.png",
+    "Docker.md"
+  ]
+}
