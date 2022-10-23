@@ -201,6 +201,48 @@ Architecture patterns:
 - Monitor pattern.
 - Human interaction pattern. 
 
+### Storage Account
+
+An Azure storage account contains all of your Azure Storage data objects, including blobs, file shares, queues, tables, and disks. The storage account provides a unique namespace for your Azure Storage data that's accessible from anywhere in the world over HTTP or HTTPS. Data in your storage account is durable and highly available, secure, and massively scalable.
+
+Blob storage is container option for store files. Usually it is the cheapest option to store files.  
+
+GPv2 stands form General Purpose v2 Storage.
+
+Hot storage - is used to store files that are used on day to day basis
+Cold storage - it is used for rarely used files like backups
+Archive storage - it is used for achived files
+
+Redundancy:
+- **Locally redundant storage (LRS)** - replicates your storage account three times within a single data center in the primary region
+- **Zone-redundant storage (ZRS)** -  replicates your storage account synchronously across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking.
+- **Geo-redundant storage (GRS)** -  copies your data synchronously three times within a single physical location in the primary region using LRS. It then copies your data asynchronously to a single physical location in a secondary region that is hundreds of miles away from the primary region.
+- **Geo-zone-redundant storage (GZRS)** - combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS storage account is copied across three [Azure availability zones](https://learn.microsoft.com/en-us/azure/availability-zones/az-overview) in the primary region and is also replicated to a secondary geographic region for protection from regional disasters.
+
+
+### Cosmos DB
+Cosmos DB is NOSQL and non realtional database. Is really good for storing data that are not relational.
+Types of supported databases:
+- core - document database to store json files and query using SQL queries to work with data.
+- mongo db - compatible with existing mongo db database.
+- cassandra - compatible with existing cassandra database.
+- azure table storage - table in cosmos db, dedicated for migrations from azure table storage to cosmos db.
+- gremlin - graph database.
+
+Database have max RU/s (request units per second). Microsoft defines RU/s as amount of compute to read 1 KB per second.
+
+Container - place that holds may files
+Partition key - key by which cosmos DB will split data physically across different partitions. Need to choose key that will allow to split data evenly between partitions. 
+
+Data consistency:
+- strong - data are copied righ away, so are always consistent across all regions.
+- bounded stalness - strong consistency with max accepted lag.
+- session (default) - provides strong consitency in regions where same user session is active, in other there is eventual consistency.
+- consistent prefix - ensure that data will be written in the correct order but might be delayed in time.
+- eventual - wickiest one, there is no guarantee that data will be write in the same order, so should only be used when order of writes is not required. 
+
+Change feed - allows to trigger serverless function when document in cosmos db has changed (dont work on deletion!).
+
 ### To excersise
 
 - Virtual machines:

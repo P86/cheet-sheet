@@ -130,6 +130,8 @@
   },
   "active": "4a65e86f402604c2",
   "lastOpenFiles": [
+    "PowerShell.md",
+    "Philosophy of software design.md",
     "Clean Code.md",
     "Cloud.md",
     "CS.md",
@@ -137,8 +139,6 @@
     "assets/git.png",
     "assets/docker.png",
     "assets/cs.png",
-    "Docker.md",
-    "Philosophy of software design.md",
-    "Dapr.md"
+    "Docker.md"
   ]
 }
