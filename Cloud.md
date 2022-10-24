@@ -246,6 +246,33 @@ Change feed - allows to trigger serverless function when document in cosmos db h
 ### Blob storage
 Is basically container option to store files.
 
+
+### Azure Active Directory
+
+Active directory is central service in azure that deals with authentication and access control. Azure AD is not the same thing as Windows AD. 
+
+Azure AD sync - is an service that allows to sync Azure AD in clound and Windows AD used on premise.
+
+Definitions:
+- User - this is user id and passowrd that is using to login azure portal. User is assignet to at least one tenant.
+- Tenant - unit of azure active directory and its security context
+
+Tenant types:
+- Standard - just normal azure active directory. Security is managed by Microsoft.
+- B2C - business to consumer, used to log in by social media accounts. Scurity is managed by third party.
+
+By default tenants use default domain that is `onmicrosoft.com`. Is possible to custom domain for tenant.
+
+> [!INFO] 
+> Is better to create my own tenant and be  global administrator of that tenant when I'm playing with azure ad
+
+Microsoft Identity Platform 
+This is a platform that uses open-sourde authenitation libraries to sign in users with Azure AD accounts.
+
+Guest user: ???
+
+Microsoft Graph is set of REST API's and client libraries that Microsoft exposes to users that allow to access data in many Microsoft's services. 
+
 ### To excersise
 
 - Virtual machines:
