@@ -273,6 +273,21 @@ Guest user: ???
 
 Microsoft Graph is set of REST API's and client libraries that Microsoft exposes to users that allow to access data in many Microsoft's services. 
 
+### Secure Data
+One way of securing data is to store keys and other sensitive informations in deployment slot variables that can be read by appliaction lika an application configuration.
+
+Azure Key Vault is service specifically designed to keep secrets. You can keep secrets like keys, certificates, passwords. It generates ulr for each secret that it's store and those secrets can be obtained progamatically during application execution.
+Also Azure Kay Vault can be limited to specific virtual network. So only applications working in certain virtual networks can access secrets in given key vault.
+
+### Caching
+Azure basically offers two ways of caching redis cache and CDN (content delivery network)
+CDN is designed to provide static files audios, videos, css, js. It stores files on different server than web service, closer to end users. CDN is global service so it is not tied to any azure region.
+Redis is distrubuted cache that is mainly used on backend. Thanks to redis backend don't have to query database every time when data are needed it might keep this in redis and read it very quickly. Reids is in memory database so operations on redis are faster then operations on standard, peristed datbase.
+CDN endpoint is endpoint that will be used to access files. When CDN server don't contain requested file, then it will go to web app provided as source of files, load that file and store locally for later use. 
+If file that is caches as been changed, you have to **purge** cdn server and allow it load new version of file from application. Other solution is put to version in file name. Then when file was changed, the version and name also are changed so it is completely different file for cdn server.
+Of course application have to use CDN url for files that have to be loaded from CDN.
+
+
 ### To excersise
 
 - Virtual machines:
