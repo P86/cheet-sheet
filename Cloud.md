@@ -287,6 +287,38 @@ CDN endpoint is endpoint that will be used to access files. When CDN server don'
 If file that is caches as been changed, you have to **purge** cdn server and allow it load new version of file from application. Other solution is put to version in file name. Then when file was changed, the version and name also are changed so it is completely different file for cdn server.
 Of course application have to use CDN url for files that have to be loaded from CDN.
 
+### Monitoring
+Depending on type of resource there is different diagnostics settings and way of collecting logs.
+Azure monitor is central location where log files, alerts & metrics are stored.
+For virtual machine utuliation of disk, network and cpu usage are monitored. This have to be enabled manually and is deisabled by default.
+Azure funtions also supports monitoring, this also needs to be manually turned on. This is called `Application Insights`.
+Whenever there will be question on exam about providing logs, visibility and obervability to solitions in azure then Azure Monitor is answer or that.
+
+### API Management
+API Management is basically API Gateway that azure is configuring for me. It allows to:
+- provide API documentation,
+- monitor health
+- setup rate limiting and throttle
+- bring modern formats like JSON and REST to exisitng APIs
+- connect to APIs hosted on premise end expose them to internet
+- gain analytics insights
+
+It also provides option to use Open API aka swagger to import API definition from external API and use it as definition for gateway.
+
+Event system
+When creating application for azure usually aplication is divided into smaller pieces. Small applications, functions etc. Thus you have to use events to allow to talk this piecies to each other.
+Event systems in azure:
+- event hub - service that allows external sources to push events to serwices working in azure.
+- event grid -  service for managing routing events from any source to any destination.
+
+### Application messaging
+Azure Storage Queue
+
+Queues in azure storage can be used for messaging between applications. Azure storage queues are place to store small piecies of data that will be read by another application.
+Messages are short and can have expiry data set. Queues in azure storage are very basic and you can't expect a high performance from it. This is not an enterprise grade solution. If high performance is required then azure service bus should be used.
+
+Azure Service Bus
+
 
 ### To excersise
 

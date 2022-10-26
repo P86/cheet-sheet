@@ -18,16 +18,6 @@
                 "source": true
               }
             }
-          },
-          {
-            "id": "7555120fa01ac9de",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.0.0"
-              }
-            }
           }
         ]
       }
@@ -151,11 +141,11 @@
   },
   "active": "4a65e86f402604c2",
   "lastOpenFiles": [
+    "CS.md",
     "Cloud.md",
+    "Clean Code.md",
     "Philosophy of software design.md",
     "PowerShell.md",
-    "Clean Code.md",
-    "CS.md",
     "Angular.md",
     "assets/git.png",
     "assets/docker.png",
