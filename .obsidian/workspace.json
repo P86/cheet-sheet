@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud.md",
-                "mode": "source",
+                "file": "Philosophy of software design.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud.md",
+                "file": "Philosophy of software design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud.md",
+                "file": "Philosophy of software design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud.md"
+                "file": "Philosophy of software design.md"
               }
             }
           }
@@ -136,20 +136,17 @@
     "width": 300,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
   "active": "4a65e86f402604c2",
   "lastOpenFiles": [
-    "CS.md",
     "Cloud.md",
-    "Clean Code.md",
     "Philosophy of software design.md",
+    "Git.md",
+    "Linux.md",
+    "CS.md",
+    "Clean Code.md",
     "PowerShell.md",
     "Angular.md",
     "assets/git.png",
-    "assets/docker.png",
-    "assets/cs.png",
-    "Docker.md"
+    "assets/docker.png"
   ]
 }

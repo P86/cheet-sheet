@@ -18,6 +18,12 @@ Cognitive load refers to how much a developer needs to know in order to complete
 #### Unknown unknowns
 It occures when it not obvious which pieces of code must be modified to complete task, of what information developer must have to carry out the task sucessfuly.
 
+## Working code Isn't Enough
+#### Tactical programming 
+In tactical programming, your main focus is to get something working, such as new feature or bug fix. Problem with tactical programming is that it is short-sighted. In this approach you don't spend time looking for the best design; you just wany to get something working soon. This approach usually leads to add another complexity to code within each task completed.
+
+#### Strategic programming
+The first step towards becoming a good software designer is to realize that **working code isn't enought**. It is not acceptable to introduce unneccessary complexities in order to finish your current task faster. The most important thing is the long-term structure of the system. your primary goal must be to produce **a great design, which also happens to work** Strategic programming requires an investment mindset. A huge up-front investments, such as trying to design the enitre system, won't be effective. Thus the best approach is to make lots of small investments on a continual basis. You can spend about 10-20% of your total developemnt time in investments. The extra time will result in a better software design, and you will start experiencing the benefits within a few months.  
 
 ## Different layer, different abstraction
 Software systems are composed in layers, where a highier leyer use the facilities provided by lower layers. In a well designed system, each layer provides a different abstraction from the layers above and below it. **If the system contains adjacent layers with similar abstractions, this is a red flas tha suggests a problem with the class decomposition.** If different layers have same abstraction there is a good change that they does not provide enough benefit to compensate for additional infrastructure they represent. 
@@ -55,4 +61,17 @@ When other developers come along to make modifications, the comments will allow 
 
 
 ## Red Flags 
+- **Shallow Module**: the interface for a class or method isn't much simpler that its implementation.
+- **Imformation Leakage**: a desing decistion is reflected in multiple modules.
+- **Temporal Decomposition**: the code structure is basen on the order in which operations are executed, not on information hiding.
+- **Everexposure**: An API forces callers to be aware of rarely used features in order to use commonly used features.
 - **Pass-through methods**: a method that does almost nothing except pass its arguments to another method with similar arguments.
+- **Repetition**: nontrivial piece of code repeated over and over.
+- **Special-General Mixture**: special-purpose code is not cleanly separated from general purpose code.
+- **Conjoined Methods**: two methods have so many dependencies that is hard to understand the implementation of one without understansing the implementation of the other. 
+- **Comments Repeats Code**: all fo the information in a comment is immediately obvious from the code next to the comment.
+- **Implementation Documentation Contaimnates Interface**: an interface comment describes implementation details not needed by users of the thing being documented.
+- **Vague Name**: the name of a variable or method is so imprecise that it dosen't convey much usefull information.
+- **Hard to Pick Name**: it is difficult to come up with a precise and intuitive name for an entity.
+- **Hard to Describe**: in order to be complete, the documentation for a variable or method must be long.
+- **Nonobvious Code**: the behaviour or meaning of a piece of code cannot be understood easily.

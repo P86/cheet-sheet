@@ -346,4 +346,10 @@ Azure Service Bus
     - excercise in sandbox (https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/5-add-logic-to-the-function-app?pivots=javascript)   
 
 ### Certificates:
+- AZ-900 - [Azure Fundamentals](https://learn.microsoft.com/en-us/certifications/exams/az-900)
 - AZ-204 - [Azure Developer Associate](https://learn.microsoft.com/pl-pl/certifications/azure-developer/)
+
+### Sources:
+- [Udemy - AZ-204 Developing Solutions for Microsoft Azure](https://www.udemy.com/course/70532-azure/learn/lecture/)
+- [Udemy - Microsoft Azure: From Zero to Hero - The Complete Guide](https://www.udemy.com/course/microsoft-azure-from-zero-to-hero-the-complete-guide/)
+- [YouTube - Microsoft Azure Fundamentals Full Course, Free Practice Tests, Website and Study Guides](https://www.youtube.com/watch?v=NPEsD6n9A_I&list=PLGjZwEtPN7j-Q59JYso3L4_yoCjj2syrM)
