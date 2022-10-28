@@ -25,6 +25,20 @@ In tactical programming, your main focus is to get something working, such as ne
 #### Strategic programming
 The first step towards becoming a good software designer is to realize that **working code isn't enought**. It is not acceptable to introduce unneccessary complexities in order to finish your current task faster. The most important thing is the long-term structure of the system. your primary goal must be to produce **a great design, which also happens to work** Strategic programming requires an investment mindset. A huge up-front investments, such as trying to design the enitre system, won't be effective. Thus the best approach is to make lots of small investments on a continual basis. You can spend about 10-20% of your total developemnt time in investments. The extra time will result in a better software design, and you will start experiencing the benefits within a few months.  
 
+## Modules Should Be Deep
+#### Modular Design
+In modular design, a software system is decomposed into a colleciton of modules that are relatively independent. MOdules can take many forms, such as classes, subsystems, or services. Modules have to work with each other. **The goal of modular design is to minimize the dependencies between modules.** In order to identify and manage dependencies, we think of each module in two parts: an `interface` and an `implementation`. Interface should provide `abstraction` over implementation. **An abstraction is a simplified view of an entity, which imits unimportant details.** 
+#### Deep Modules
+The best modules are those that provide powerful functionality yet have simple interfaces. The therm `deep` is used to describe that modules. A deep module is good abstraction because only small fraction of its internal complecxity is visible to its users. 
+#### Shallow Modules
+On the other hand, a shallow module is one whose interface is relatively complex in comparision to the functionality that it provides. 
+#### Shallow Classes
+The value of deep classes is not widely appreciated today. The conventional wisdom in programming it that classes should be small not deep. We were taught that classes are good and the more classes then better. **That is not good idea.** Classes should group similar functiality and hide its complexity after relatively simple interface. You don't want spread same functionality between many classes, because then realatively small change can require to modify a lot of files. 
+
+> [!INFO] 
+> Interfaces shold be designed to make the common case as simple as possible.
+
+
 ## Different layer, different abstraction
 Software systems are composed in layers, where a highier leyer use the facilities provided by lower layers. In a well designed system, each layer provides a different abstraction from the layers above and below it. **If the system contains adjacent layers with similar abstractions, this is a red flas tha suggests a problem with the class decomposition.** If different layers have same abstraction there is a good change that they does not provide enough benefit to compensate for additional infrastructure they represent. 
 
