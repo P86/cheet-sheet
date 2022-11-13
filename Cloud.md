@@ -152,11 +152,11 @@ Logical group of physical hardware that can undergo maintenance and be rebooted 
 Collection of Fault Domains and Update Domains your VMs will be spread across. Can contains up to 3 Fault Domains and up to 20 Update Domains. All domains are located in the same.
 
 ### Availability zone
-A physically separate zone within an Azure region. Technically a building containing an autonomous data center. each zone functions as fasult and update domain. Provides protection agains a complete zone shutdown. It is free, you don't pay for availability zone
+A physically separate zone within an Azure region (datacenter). Technically a building containing an autonomous data center. Each zone functions as fasult and update domain. Provides protection agains a complete zone shutdown. It is free, you don't pay for availability zone
 
 **How to take advantage of availability zone**:
-- deploy indentical VVMs into separate zones in th e same region
-- ensure thwy won't be shut down in the same time when zone shuts down
+- deploy indentical VVMs into separate zones in the same region
+- ensure they won't be shut down in the same time when zone shuts down
 - deply load balancer to route between the VMs
 
 ### App Serivce

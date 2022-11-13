@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8938be8b08e390c0",
+        "id": "fd08444ffa70ad74",
         "type": "tabs",
         "children": [
           {
-            "id": "4a65e86f402604c2",
+            "id": "586fcf0b6bebac84",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Philosophy of software design.md",
+                "file": "Platform engeenering.md",
                 "mode": "source",
                 "source": true
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Philosophy of software design.md",
+                "file": "Platform engeenering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Philosophy of software design.md",
+                "file": "Platform engeenering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Philosophy of software design.md"
+                "file": "Platform engeenering.md"
               }
             }
           }
@@ -136,17 +136,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4a65e86f402604c2",
+  "active": "586fcf0b6bebac84",
   "lastOpenFiles": [
-    "Cloud.md",
-    "Philosophy of software design.md",
-    "Git.md",
-    "Linux.md",
-    "CS.md",
-    "Clean Code.md",
-    "PowerShell.md",
     "Angular.md",
-    "assets/git.png",
-    "assets/docker.png"
+    "Platform engeenering.md",
+    "Docker.md",
+    "Philosophy of software design.md",
+    "Cloud.md",
+    "Dapr.md",
+    "Git.md",
+    "Pull request review checklist.md",
+    "README.md",
+    "Rust.md"
   ]
 }
