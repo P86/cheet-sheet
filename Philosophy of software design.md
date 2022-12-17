@@ -39,6 +39,10 @@ The value of deep classes is not widely appreciated today. The conventional wisd
 > Interfaces shold be designed to make the common case as simple as possible.
 
 
+## Information Hiding
+One of the most important techiquest for acheving deep modules is information hiding. The knowledge is embedden in module's implementation but does not appear in it's interface. So is not visible to other modules. The hidden infromation usually consist details how given functionality was implemented. This includes algorithms, data structures and low level details. It reduces complecity in two ways. First, simplifies module interface. Second, make easier to evolve system. 
+
+The oposite of information hidding is information leackage. Information leackage occurs when design decision is reflected in multiple modules. This creates dependency between the modules: any change to that decision will require changes to all of the involved modules. One common casue of information leackage is is design style called `temporal decomposition`. In temporal decomposition, the structure of a system coresponds to the time order in which operations will occur. ** When designing modules, focues on the knowledge that's needed to perform each task, not the order in which tasks occur.**
 ## Different layer, different abstraction
 Software systems are composed in layers, where a highier leyer use the facilities provided by lower layers. In a well designed system, each layer provides a different abstraction from the layers above and below it. **If the system contains adjacent layers with similar abstractions, this is a red flas tha suggests a problem with the class decomposition.** If different layers have same abstraction there is a good change that they does not provide enough benefit to compensate for additional infrastructure they represent. 
 
