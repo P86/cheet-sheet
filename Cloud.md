@@ -323,27 +323,32 @@ Azure Service Bus
 ### To excersise
 
 - Virtual machines:
-    - sizes,
-    - disk & network options
-    - connection to machine,
-    - ARM Template,
-    - powershell & bash command
+    - [ ] sizes,
+    - [ ] disk & network options
+    - [ ] connection to machine,
+    - [ ] ARM Template,
+    - [ ] powershell & bash command
 - Azure App Service:
-    - deployment options,
-    - scaling & autoscaling,
-    - publishing,
-    - deployment slots,
-    - diagnostics,
-    - bash & powershell commands
+    - [X] app service plan,
+    - [X] deployment options
+	    - [X] deploy with Visual Studio
+	    - [X] deploy with GitHub action
+    - [ ] scaling & autoscaling,
+    - [X] deployment slots,
+    - [X] application settings,
+    - [X] diagnostics,
+    - [ ] scripting
+	    - [X] powershell
+	    - [ ] bash
 - Containers:
-    - container instance,
-    - container registry,
-    - deply to azure web app
-    - deployment,
+    - [ ] container instance,
+    - [ ] container registry,
+    - [ ] deply to azure web app
+    - [ ] deployment,
 - Functions app:
-    - standard functions,
-    - durable functions,
-    - excercise in sandbox (https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/5-add-logic-to-the-function-app?pivots=javascript)   
+    - [ ] standard functions,
+    - [ ] durable functions,
+    - [ ] excercise in sandbox (https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/5-add-logic-to-the-function-app?pivots=javascript)   
 
 ### Certificates:
 - AZ-900 - [Azure Fundamentals](https://learn.microsoft.com/en-us/certifications/exams/az-900)

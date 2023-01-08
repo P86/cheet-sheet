@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Philosophy of software design.md",
+                "file": "Cloud.md",
                 "mode": "source",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Philosophy of software design.md",
+                "file": "Cloud.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Philosophy of software design.md",
+                "file": "Cloud.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Philosophy of software design.md"
+                "file": "Cloud.md"
               }
             }
           }
@@ -137,17 +137,27 @@
     "width": 300,
     "collapsed": true
   },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
   "active": "6caf100e8d3a7132",
   "lastOpenFiles": [
-    "Cloud.md",
-    "CS.md",
-    "Linux.md",
+    "Angular.md",
+    "Sql.md",
+    "Rust.md",
+    "Clean Code.md",
+    "Docker.md",
     "Dapr.md",
     "Git.md",
     "Pull request review checklist.md",
     "README.md",
-    "Platform engeenering.md",
-    "CSS.md",
-    "PowerShell.md"
+    "Platform engeenering.md"
   ]
 }
