@@ -1,0 +1,1 @@
+- [Awesome Software and Architectural Design Patterns](https://github.com/DovAmir/awesome-design-patterns?utm_source=programmingdigest&utm_medium&utm_campaign=1493)
