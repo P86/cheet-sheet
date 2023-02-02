@@ -241,7 +241,7 @@ Data consistency:
 - consistent prefix - ensure that data will be written in the correct order but might be delayed in time.
 - eventual - wickiest one, there is no guarantee that data will be write in the same order, so should only be used when order of writes is not required. 
 
-Change feed - allows to trigger serverless function when document in cosmos db has changed (dont work on deletion!).
+Change feed - allows to trigger serverless function when document in cosmos db has changed (don't work on deletion!).
 
 ### Blob storage
 Is basically container option to store files.
@@ -347,7 +347,24 @@ Azure Service Bus
     - [ ] deployment,
 - Functions app:
     - [ ] standard functions,
-    - [ ] durable functions,
+	    - [X] parameters from url
+	    - [X] access configuration
+	    - [X] unit tests of function
+	    - [x] use dependency injection
+	    - [ ] access secrets from key vault
+	    - [ ] scalability
+	    - [ ] in/out integrations
+	    - [ ] using cosmos db to store and fetch data
+	    - [ ] using visual studio code to work with functions
+    - [X] durable functions
+	    - [X] use trigger function,
+	    - [X] create orchestrator function,
+	    - [X] create durable function with many activites,
+	    - [X] create durable function with events,
+	    - [X] create durable function in Visual Studio,
+	- [X] Cosmos DB
+		- [X] create instance of cosmos db,
+		- [X] use cosmos db from web app or function
     - [ ] excercise in sandbox (https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/5-add-logic-to-the-function-app?pivots=javascript)   
 
 ### Certificates:

@@ -149,15 +149,15 @@
   },
   "active": "6caf100e8d3a7132",
   "lastOpenFiles": [
-    "Angular.md",
-    "Sql.md",
-    "Rust.md",
-    "Clean Code.md",
-    "Docker.md",
+    "CS.md",
     "Dapr.md",
     "Git.md",
     "Pull request review checklist.md",
     "README.md",
-    "Platform engeenering.md"
+    "Platform engeenering.md",
+    "Linux.md",
+    "PowerShell.md",
+    "CSS.md",
+    "Philosophy of software design.md"
   ]
 }
