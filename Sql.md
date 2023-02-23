@@ -8,12 +8,17 @@ The exclusive lock will be imposed by the transaction when it wants to modify th
 ### Shared lock (S)
 This lock type, when imposed, will reserve a page or row to be available only for reading, which means that any other transaction will be prevented to modify the locked record as long as the lock is active. However, a shared lock can be imposed by several transactions at the same time over the same page or row and in that way several transactions can share the ability for data reading since the reading process itself will not affect anyhow the actual page or row data. In addition, a shared lock will allow write operations, but no DDL changes will be allowed
 
+### Scope of locks 
+Locks can be placed at the level of individual rows, index keys, pages, ranges or entire tables. These objects create natural hierarchy: the table consists of many pages, on each page many rows are written on the page, and so on. For this reason database servers must analyze all existing locks, before creating a new one - if at least one row of the table exists locked in X mode, you can't put another one on the whole table locks.
+
 ## Transactions isolation levels
 Most of the sql servers allows to set level of transactions isolation. It can be set on server level, on database level and on session level.
 There are four isolation levels:
 
 ### Read Uncommited
 This is the lowest isolation level. In this level, dirty reads are allowed, so one transaction may see not-yet-committed changes made by other transactions.
+
+In this mode (often enforced at level individual instructions using specific instructions database server optimizer directives) you can read data that we know will not be in the same modified over time.
 
 ### Read Commited
 Is default level of isolation. Read committed is an isolation level that guarantees that any data read is committed at the moment it is read. It simply restricts the reader from seeing any intermediate, uncommitted, 'dirty' read. **It makes no promise whatsoever that if the transaction re-issues the read, it will find the same data; data is free to change after it is read.**
