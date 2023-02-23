@@ -1,5 +1,31 @@
 # SQL
 
+## Locks
+### Exclusive lock (X)
+This lock type, when imposed, will ensure that a page or row will be reserved exclusively for the transaction that imposed the exclusive lock, as long as the transaction holds the lock.
+The exclusive lock will be imposed by the transaction when it wants to modify the page or row data, which is in the case of DML statements DELETE, INSERT and UPDATE. An exclusive lock can be imposed to a page or row only if there is no other shared or exclusive lock imposed already on the target. **This practically means that only one exclusive lock can be imposed to a page or row, and once imposed no other lock can be imposed on locked resources**
+
+### Shared lock (S)
+This lock type, when imposed, will reserve a page or row to be available only for reading, which means that any other transaction will be prevented to modify the locked record as long as the lock is active. However, a shared lock can be imposed by several transactions at the same time over the same page or row and in that way several transactions can share the ability for data reading since the reading process itself will not affect anyhow the actual page or row data. In addition, a shared lock will allow write operations, but no DDL changes will be allowed
+
+## Transactions isolation levels
+
+Most of the sql servers allows to set level of transactions isolation. It can be set on server level, on database level and on session level.
+There are four isolation levels:
+
+### Read Uncommited
+This is the lowest isolation level. In this level, dirty reads are allowed, so one transaction may see not-yet-committed changes made by other transactions.
+
+### Read Commited
+Is default level of isolation. Read committed is an isolation level that guarantees that any data read is committed at the moment it is read. It simply restricts the reader from seeing any intermediate, uncommitted, 'dirty' read. **It makes no promise whatsoever that if the transaction re-issues the read, it will find the same data; data is free to change after it is read.**
+
+In this isolation level, a lock-based concurrency control DBMS implementation keeps write locks (acquired on selected data) until the end of the transaction, but read locks are released as soon as the SELECT operation is performed.
+
+### Reapatable read
+
+
+
+
 ### Create table backup
 ```sql
 select * into [<source table>] from [<dest table>]
