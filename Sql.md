@@ -38,6 +38,14 @@ In SERIALIZATION mode, **transactions referencing the same tables are executed o
 
 In SERIALIZATION mode, we are guaranteed to read within transaction, the data will always be the same - the database server will not it will allow not only their change, but also the emergence of new ones data. However, during this time, other users will not be able to modify locked tables. In most cases this increases the server response time so much that it's better is to copy the read data.
 
+### Clear table
+The fastest way to clear a table is to execute the TRUNCATE statement TABLE. Because this is a very low operation level (at the level of data blocks, not table rows),
+it is impossible to indicate the rows to be deleted. WITH for the same reason, it is impossible to truncate a related table with other tables, even if they are empty, which is for sure they do not contain references to the primary keys being deleted.
+
+```sql
+TRUNCATE TABLE [<table>];
+```
+
 ### Create table backup
 ```sql
 select * into [<source table>] from [<dest table>]
