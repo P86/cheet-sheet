@@ -9,7 +9,6 @@ The exclusive lock will be imposed by the transaction when it wants to modify th
 This lock type, when imposed, will reserve a page or row to be available only for reading, which means that any other transaction will be prevented to modify the locked record as long as the lock is active. However, a shared lock can be imposed by several transactions at the same time over the same page or row and in that way several transactions can share the ability for data reading since the reading process itself will not affect anyhow the actual page or row data. In addition, a shared lock will allow write operations, but no DDL changes will be allowed
 
 ## Transactions isolation levels
-
 Most of the sql servers allows to set level of transactions isolation. It can be set on server level, on database level and on session level.
 There are four isolation levels:
 
@@ -21,10 +20,18 @@ Is default level of isolation. Read committed is an isolation level that guarant
 
 In this isolation level, a lock-based concurrency control DBMS implementation keeps write locks (acquired on selected data) until the end of the transaction, but read locks are released as soon as the SELECT operation is performed.
 
-### Reapatable read
+### Repeatable reads
+In this isolation level, a lock-based concurrency control DBMS implementation **keeps read and write locks (acquired on selected data) until the end of the transaction.** However, range-locks are not managed, so phantom reads can occur.
 
+In the REPEATABLE READ mode, you should read the data that in within the transaction are read several times and may be changed at the same time by other users.
+Such a situation takes place, for example, in various types of statements and summary reports, in which reading the same data, each time together we must get the same results, otherwise collation or the report will be inconsistent.
 
+### Serializable
+**This is the highest isolation level.**
 
+In SERIALIZATION mode, **transactions referencing the same tables are executed one after the other**. Lock entire objects (or index key ranges), not just the data read, for the duration of the transaction allows you to eliminate phantom reads, but causes that by reading even one row of the table, we can prevent other users from modifying it data stored in it.
+
+In SERIALIZATION mode, we are guaranteed to read within transaction, the data will always be the same - the database server will not it will allow not only their change, but also the emergence of new ones data. However, during this time, other users will not be able to modify locked tables. In most cases this increases the server response time so much that it's better is to copy the read data.
 
 ### Create table backup
 ```sql
