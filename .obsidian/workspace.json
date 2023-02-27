@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6caf100e8d3a7132",
+            "id": "33cc8d05a164c253",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud.md",
-                "mode": "source",
+                "file": "AZ-900 Course.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud.md",
+                "file": "AZ-900 Course.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud.md",
+                "file": "AZ-900 Course.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud.md"
+                "file": "AZ-900 Course.md"
               }
             }
           }
@@ -147,17 +147,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6caf100e8d3a7132",
+  "active": "33cc8d05a164c253",
   "lastOpenFiles": [
-    "CS.md",
-    "Dapr.md",
-    "Git.md",
+    "Clean Code.md",
     "Pull request review checklist.md",
-    "README.md",
+    "Rust.md",
+    "Angular.md",
+    "AZ-900 Course.md",
     "Platform engeenering.md",
-    "Linux.md",
+    "CS.md",
     "PowerShell.md",
-    "CSS.md",
-    "Philosophy of software design.md"
+    "Philosophy of software design.md",
+    "CSS.md"
   ]
 }

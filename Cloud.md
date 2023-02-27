@@ -279,6 +279,14 @@ One way of securing data is to store keys and other sensitive informations in de
 Azure Key Vault is service specifically designed to keep secrets. You can keep secrets like keys, certificates, passwords. It generates ulr for each secret that it's store and those secrets can be obtained progamatically during application execution.
 Also Azure Kay Vault can be limited to specific virtual network. So only applications working in certain virtual networks can access secrets in given key vault.
 
+Storage account is always encrypted. The technology is called `Storage Service Encryption` in short `SSE`. It cannot be turned off. By default Microsoft manages the keys for encryption. But if there is a need you can provide your ownn keys. 
+
+The other thing is `Encryption At Transit`. It happens when file from secured storage account must be transit to service. Basically by setting `Secure transfer Required` Azure forces to use HTTP when accessing files in storage account.
+
+SQL Databases also are encrypted. This encryption is transparent for application. Data selected from database are encrypted and sent to application. There is one exception, the default database, master database is not encrypted, because the encryption keys are stored in master database.
+
+Key Valult is designed to store keys (disk encryption keys), secrets and certificates in secure manner. Is recommend that you use a **managed identity** for applications deployed to Azure. If you use Azure services that don't support managed identities or if applications are deployed on-premises, a [service principal with a certificate](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal) is a possible alternative. In that scenario, the certificate should be stored in Key Vault and frequently rotated.
+
 ### Caching
 Azure basically offers two ways of caching redis cache and CDN (content delivery network)
 CDN is designed to provide static files audios, videos, css, js. It stores files on different server than web service, closer to end users. CDN is global service so it is not tied to any azure region.
@@ -341,10 +349,10 @@ Azure Service Bus
 	    - [X] powershell
 	    - [ ] bash
 - Containers:
-    - [ ] container instance,
-    - [ ] container registry,
-    - [ ] deply to azure web app
-    - [ ] deployment,
+    - [X] container instance,
+    - [X] container registry,
+    - [x] deply to azure web app
+    - [x] deployment,
 - Functions app:
     - [ ] standard functions,
 	    - [X] parameters from url
@@ -365,6 +373,8 @@ Azure Service Bus
 	- [X] Cosmos DB
 		- [X] create instance of cosmos db,
 		- [X] use cosmos db from web app or function
+	-  Secure Data
+		- [x] Application uses Key Valut
     - [ ] excercise in sandbox (https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/5-add-logic-to-the-function-app?pivots=javascript)   
 
 ### Certificates:

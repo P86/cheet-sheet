@@ -1,5 +1,6 @@
 {
   "theme": "system",
   "textFontFamily": "",
-  "accentColor": ""
+  "accentColor": "",
+  "baseFontSize": 16
 }
