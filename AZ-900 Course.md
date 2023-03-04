@@ -59,6 +59,64 @@ Cloud computing is the delivery of computing services over the internet by using
 -   Run your infrastructure more efficiently.
 -   Scale as your business needs change.
 
-Resources:
+## Resources:
 - [Identify the Benefits of Cloud Computing - AZ-900 Certification Course - YouTube](https://www.youtube.com/watch?v=VaMdHKJQ15c&list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3&index=2)
 - [CapEx, OpEx and Consumption-based - AZ-900 Certification Course - YouTube](https://www.youtube.com/watch?v=WiwV9wb0GMo&list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3&index=3)
+
+# Describe the benefits of using cloud services
+
+## Describe the benefits of high availability and scalability in the cloud
+
+### High availability
+
+High availability focuses on ensuring maximum availability, regardless of disruptions or events that may occur. Azure is a highly available cloud environment with uptime guarantees depending on the service. These guarantees are part of the service-level agreements (SLAs). Availability is also described as "Up Time".
+
+### Scalability
+
+Scalability refers to the ability to adjust resources to meet demand. If you suddenly experience peak traffic and your systems are overwhelmed, the ability to scale means you can add more resources to better handle the increased demand. If you suddenly experience peak traffic and your systems are overwhelmed, the ability to scale means you can add more resources to better handle the increased demand. 
+
+Scaling generally comes in two varieties: vertical and horizontal. Vertical scaling is focused on increasing or decreasing the capabilities of resources. Horizontal scaling is adding or subtracting the number of resources.
+
+## Describe the benefits of reliability and predictability in the cloud
+
+### Reliability
+
+Reliability is the ability of a system to recover from failures and continue to function. The cloud, by virtue of its decentralized design, naturally supports a reliable and resilient infrastructure. With a decentralized design, the cloud enables you to have resources deployed in regions around the world. With this global scale, even if one region has a catastrophic event other regions are still up and running.
+
+### Predictability
+
+Predictability can be focused on performance predictability or cost predictability. 
+
+Performance predictability focuses on predicting the resources needed to deliver a positive experience for your customers. **Autoscaling, load balancing, and high availability** are just some of the cloud concepts that support performance predictability.
+
+Cost predictability is focused on predicting or forecasting the cost of the cloud spend. With the cloud, you can **track your resource use in real time, monitor resources** to ensure that you’re using them in the **most efficient way**, and **apply data analytics to find patterns** and trends that help better plan resource deployments.
+
+## Describe the benefits of security and governance in the cloud
+
+Whether you’re deploying infrastructure as a service or software as a service, cloud features support governance and compliance. Things like **set templates** help ensure that all your deployed resources **meet corporate standards and government regulatory requirements**. **Cloud-based auditing** helps flag any resource that’s **out of compliance with your corporate standards** and provides mitigation strategies.
+
+Because the cloud is intended as an over-the-internet delivery of IT resources, cloud providers are typically well suited to handle things like distributed denial of service (DDoS) attacks, making your network more robust and secure.
+
+## Describe the benefits of manageability in the cloud
+
+### Management of the cloud
+
+Management of the cloud speaks to managing your cloud resources. In the cloud, you can:
+
+-   Automatically scale resource deployment based on need.
+-   Deploy resources based on a preconfigured template, removing the need for manual configuration.
+-   Monitor the health of resources and automatically replace failing resources.
+-   Receive automatic alerts based on configured metrics, so you’re aware of performance in real time.
+
+### Management in the cloud
+
+Management in the cloud speaks to how you’re able to manage your cloud environment and resources. You can manage these:
+
+-   Through a web portal.
+-   Using a command line interface.
+-   Using APIs.
+-   Using PowerShell.
+
+## Resources: 
+- [Reliability and Predictability - AZ-900 Certification Course - May 2022 New - YouTube](https://www.youtube.com/watch?v=kD2YqdDaO1w&list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3&index=8)
+- [Purpose of Service Level Agreements - AZ-900 Certification Course - YouTube](https://www.youtube.com/watch?v=3QIVbgnNrR0&list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3&index=61)
