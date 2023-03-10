@@ -8,6 +8,11 @@ Installation
 npm install -g @nestjs/cli
 ```
 
+Display help
+```
+nest --help
+```
+
 Create new project
 ```
 nest new <project name>
