@@ -22,3 +22,13 @@ Start application
 ```
 npm run start:dev
 ```
+
+Generate controller
+```
+nest g controller <name>
+```
+
+Generate service 
+```
+nest g service <name>
+```
