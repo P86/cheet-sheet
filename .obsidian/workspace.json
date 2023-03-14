@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "AZ-900 Course.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -150,6 +150,7 @@
   },
   "active": "33cc8d05a164c253",
   "lastOpenFiles": [
+    "Pasted image 20230314152836.png",
     "Clean Code.md",
     "Pull request review checklist.md",
     "Rust.md",
