@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "068e3f9effbd1641",
+        "id": "b0734f3e7dd3d955",
         "type": "tabs",
         "children": [
           {
-            "id": "33cc8d05a164c253",
+            "id": "546c751e8236a2a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AZ-900 Course.md",
+                "file": "React.md",
                 "mode": "source",
                 "source": true
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AZ-900 Course.md",
+                "file": "React.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AZ-900 Course.md",
+                "file": "React.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AZ-900 Course.md"
+                "file": "React.md"
               }
             }
           }
@@ -148,14 +148,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "33cc8d05a164c253",
+  "active": "546c751e8236a2a4",
   "lastOpenFiles": [
+    "React.md",
+    "AZ-900 Course.md",
+    "NestJS.md",
     "Pasted image 20230314152836.png",
     "Clean Code.md",
     "Pull request review checklist.md",
     "Rust.md",
     "Angular.md",
-    "AZ-900 Course.md",
     "Platform engeenering.md",
     "CS.md",
     "PowerShell.md",
