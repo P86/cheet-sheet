@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "React.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -65,13 +65,20 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "77bd138d69979da5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 290.5,
-    "collapsed": true
+    "width": 290.5
   },
   "right": {
     "id": "a0b17a0a7c6a7964",
@@ -150,9 +157,11 @@
   },
   "active": "546c751e8236a2a4",
   "lastOpenFiles": [
+    "Philosophy of software design.md",
     "React.md",
-    "AZ-900 Course.md",
+    "Sql.md",
     "NestJS.md",
+    "AZ-900 Course.md",
     "Pasted image 20230314152836.png",
     "Clean Code.md",
     "Pull request review checklist.md",
@@ -161,7 +170,6 @@
     "Platform engeenering.md",
     "CS.md",
     "PowerShell.md",
-    "Philosophy of software design.md",
     "CSS.md"
   ]
 }
