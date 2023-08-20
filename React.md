@@ -58,6 +58,16 @@ export default function SampleComponent() {
 }
 ```
 
+### Dynamically style componnent
+Just use code inside curly braces and change style of component.
+```jsx
+const [isValid, setIsValid] = useState(true);
+...
+<div className="some-class">
+    <p style={{ color: isValid ? 'red' : 'black' }}>Some Text</p>
+</div>
+```
+
 ### Use values from code (use curly braces in template)
 ```js
 export default function SampleComponent() {
