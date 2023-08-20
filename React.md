@@ -73,13 +73,17 @@ export default function SampleComponent() {
 
 ### Sharing data between components
 Two methods of consume data
-```js
-export default function DateComponent(props) {
-  return <h1>{props.dateToDisplay.toDateString()}</h1>;
+```ts
+export type Props = {
+   dateToDisplay: Date;
+}
+
+export default function DateComponent({ dateToDisplay }: Props) {
+  return <h1>{dateToDisplay.toDateString()}</h1>;
 }[]()
 ```
-```js
-export default function DateComponent({dateToDisplay}) {
+```ts
+export default function DateComponent({ dateToDisplay: Date }) {
   return <h1>{dateToDisplay.toDateString()}</h1>;f
 }
 ```
