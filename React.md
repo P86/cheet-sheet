@@ -58,7 +58,7 @@ export default function SampleComponent() {
 }
 ```
 
-### Dynamically style componnent
+### Dynamically style componnent (inline styles - not recomended)
 Just use code inside curly braces and change style of component.
 ```jsx
 const [isValid, setIsValid] = useState(true);
@@ -67,6 +67,24 @@ const [isValid, setIsValid] = useState(true);
     <p style={{ color: isValid ? 'red' : 'black' }}>Some Text</p>
 </div>
 ```
+
+### Dynamically style componnent (recomended)
+Just use diffenret css class.
+
+const [isValid, setIsValid] = useState(true);
+...
+<div className={ isValid ? 'valid-style' : 'invalid-style' }>
+    <p>Some Text</p>
+</div>
+```
+
+### CSS Modules
+Another way of styling components is to use [CSS Modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/). Css modules have one, big advantage, they generate unique name for each usage of css class. Thanks to you can achieve separation between styles used in components and there won't be a risk that style for one component will interfere with style for other component.
+
+### Debugging React application
+To debug react application use breakpoints in web browser. Go to Developer Tools -> Sources -> find file where you want to place breakopint (ctrl + p allows to search file by name) and place breakpoint in line you want to debug.
+
+Another usefull tool is React Dev Tools. This is just extension for browser that let you explore structure of react components, props passed to components, used hooks etc. 
 
 ### Use values from code (use curly braces in template)
 ```js
