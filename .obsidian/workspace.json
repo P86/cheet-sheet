@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "React.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -159,17 +159,23 @@
   "lastOpenFiles": [
     "Philosophy of software design.md",
     "React.md",
+    "Rust.md",
     "Sql.md",
-    "NestJS.md",
-    "AZ-900 Course.md",
+    "Platform engeenering.md",
+    "PowerShell.md",
+    "Resources.md",
+    "README.md",
     "Pasted image 20230314152836.png",
     "Clean Code.md",
-    "Pull request review checklist.md",
-    "Rust.md",
+    "AZ-900 Course.md",
     "Angular.md",
-    "Platform engeenering.md",
     "CS.md",
-    "PowerShell.md",
-    "CSS.md"
+    "NestJS.md",
+    "Git.md",
+    "Dapr.md",
+    "CSS.md",
+    "Cloud.md",
+    "Docker.md",
+    "Pull request review checklist.md"
   ]
 }

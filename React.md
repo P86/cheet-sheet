@@ -58,6 +58,28 @@ export default function SampleComponent() {
 }
 ```
 
+### Use state in component
+To store state in component use `useState` hook.
+```jsx
+const [isValid, setIsValid] = useState(true);
+```
+
+`useState` returns two values: current state and function that allows to mutate state. So to read current state just read value of `isValid` to mutate state set new state value using `setIsValid` function.
+
+#### Update state using current value
+
+This is important. If you want to update state based on current state you **must pass function to state update function** not just value.
+
+Incorrect
+```jsx
+setIsValid(!isValid)
+```
+
+Correct
+```jsx
+setIsValid(wasValid => !wasValid);
+```
+
 ### Dynamically style componnent (inline styles - not recomended)
 Just use code inside curly braces and change style of component.
 ```jsx
@@ -70,9 +92,9 @@ const [isValid, setIsValid] = useState(true);
 
 ### Dynamically style componnent (recomended)
 Just use diffenret css class.
-
+```jsx
 const [isValid, setIsValid] = useState(true);
-...
+
 <div className={ isValid ? 'valid-style' : 'invalid-style' }>
     <p>Some Text</p>
 </div>
@@ -83,6 +105,8 @@ Another way of styling components is to use [CSS Modules](https://create-react-a
 
 ### Debugging React application
 To debug react application use breakpoints in web browser. Go to Developer Tools -> Sources -> find file where you want to place breakopint (ctrl + p allows to search file by name) and place breakpoint in line you want to debug.
+
+Also using [StrictMode](https://react.dev/reference/react/StrictMode) is helpful in finding impure components. This mode renders every component twice to expose components that handles state management in wrong way. 
 
 Another usefull tool is React Dev Tools. This is just extension for browser that let you explore structure of react components, props passed to components, used hooks etc. 
 
@@ -130,6 +154,11 @@ export function App(props) {
 ```
 
 ## Hooks
+
+### Using hooks rules
+
+- Only call Hooks inside Component Functions
+- Only call Hooks on the top level
 
 ### useEffect()
 
@@ -193,3 +222,29 @@ export const SomeContextProvider = (props) => {
 
 > [!INFO]
 > Context is not optimized for high frequency changes. In that case use different state tool like `Redux`
+
+
+### Custom Hooks
+
+Hooks name should start with `use`. Because react recognize functions as a hooks by its name and apply special rules to them eg. produces error if that hook is used inside other hook.
+
+```jsx
+function useFetch<T>(fetchFunction: Promise<T>, initial: T ) {
+	const [data, setData] = useState(initial);
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState(null);
+	fetchFunction().then((result) => {
+	    setIsLoading(true);
+	    setData(result);
+	    setIsLoading(false);
+	}).catch((error) => {
+	    setError(error);
+	    setIsLoading(false);
+	});
+	return [isLoading, error, data];
+}
+```
+
+```jsx
+const [isLoading, error, data] = useFetch(<data loading function>, <initial value>);
+```
