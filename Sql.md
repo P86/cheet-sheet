@@ -67,6 +67,8 @@ Index can be also created on some subset of columns
 CREATE UNIQUE INDEX <name> ON <table> (<column>) WHERE <condition>
 ```
 
+Most database engines like PostgreSQL automatically creates indexes for primary key columns and columns with `unique` constraint. So there is no need to create indexes for those columns.  
+
 ### Removing index 
 ```sql
 DROP INDEX <name>
