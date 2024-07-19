@@ -45,6 +45,33 @@ The TRUNCATE command is used to delete the complete data from the table. Is the 
 TRUNCATE TABLE [<table>];
 ```
 
+### Create index 
+```sql
+CREATE INDEX <name> ON <table> (<column>)
+```
+This creates standard B-Tree index on column in table.
+Name of index should be in format "<table>_<column>_idx".
+
+Index can be created on multiple columns
+```sql
+CREATE INDEX <name> ON <table> (<column1>, <column2>)
+```
+
+Also there can be unique index that allows to guarantee that column or columns have unique values 
+```sql
+CREATE UNIQUE INDEX <name> ON <table> (<column>)
+```
+
+Index can be also created on some subset of columns
+```sql
+CREATE UNIQUE INDEX <name> ON <table> (<column>) WHERE <condition>
+```
+
+### Removing index 
+```sql
+DROP INDEX <name>
+```
+
 ### Benchmarking query
 ```sql
 EXPLAIN ANALYZE <actual query>
