@@ -50,7 +50,7 @@ TRUNCATE TABLE [<table>];
 CREATE INDEX <name> ON <table> (<column>)
 ```
 This creates standard B-Tree index on column in table.
-Name of index should be in format "<table>_<column>_idx".
+Name of index should be in format "table_name_column_name_idx".
 
 Index can be created on multiple columns
 ```sql
