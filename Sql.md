@@ -74,6 +74,13 @@ Most database engines like PostgreSQL automatically creates indexes for primary 
 DROP INDEX <name>
 ```
 
+### Query indexes in DB
+```sql
+SELECT relname, relkind
+FROM pg_class
+WHERE relkind = 'i'
+```
+
 ### Benchmarking query
 ```sql
 EXPLAIN ANALYZE <actual query>
