@@ -45,6 +45,12 @@ The TRUNCATE command is used to delete the complete data from the table. Is the 
 TRUNCATE TABLE [<table>];
 ```
 
+### Benchmarking query
+```sql
+EXPLAIN ANALYZE <actual query>
+```
+It returns query plan, planing time and execution time
+
 ### Create table backup
 ```sql
 select * into [<source table>] from [<dest table>]
