@@ -118,7 +118,7 @@ SELECT * FROM [XV8122017_June_Smoke].INFORMATION_SCHEMA.ROUTINES
 ### SQL pagination
 If you application need to return rows in portions aka paginated then followed query can be used to fetch portion of rows and count of all rows
 ```sql
-SELECT *, COUNT(*) OVER()
+SELECT *, COUNT(*) OVER() as total_rows
 FROM (<query returns all data>)
 LIMIT <page size>
 OFFSET <page size * page index>
