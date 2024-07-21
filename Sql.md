@@ -107,9 +107,19 @@ SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE COLUMN_NAME = '<column name>' AND
 DROP TABLE [<table name>]
 ```
 
+
 ### List stored procedures 
 ```sql
 SELECT * FROM [XV8122017_June_Smoke].INFORMATION_SCHEMA.ROUTINES
  WHERE ROUTINE_TYPE = 'PROCEDURE' AND SPECIFIC_NAME LIKE '%arrangement%'
  AND LEFT(ROUTINE_NAME, 3) NOT IN ('sp_', 'xp_', 'ms_')
+```
+
+### SQL pagination
+If you application need to return rows in portions aka paginated then followed query can be used to fetch portion of rows and count of all rows
+```sql
+SELECT *, COUNT(*) OVER()
+FROM (<query returns all data>)
+LIMIT <page size>
+OFFSET <page size * page index>
 ```
