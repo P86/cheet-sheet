@@ -99,6 +99,14 @@ SELECT * FROM [XV8122017_June_Smoke].INFORMATION_SCHEMA.ROUTINES
  AND LEFT(ROUTINE_NAME, 3) NOT IN ('sp_', 'xp_', 'ms_')
 ```
 
+### Analytical/Window functions
+**A window function performs a calculation across a set of table rows that are somehow related to the current row**, is comparable to the type of calculation that can be done with an aggregate function. However, window functions do not cause rows to become grouped into a single output row like non-window aggregate calls would. Instead, the rows retain their separate identities. Behind the scenes, the window function is able to access more than just the current row of the query result.
+```sql
+SELECT avg(<column>) OVER ([PARTITION BY <columns>] [ORDER BY <columns>]) from <table>;
+```
+
+If no parition is defined in `OVER()` clausule then whole table is an parition (see SQL Pagination section).
+
 ### SQL pagination
 If you application need to return rows in portions aka paginated then followed query can be used to fetch portion of rows and count of all rows
 ```sql
