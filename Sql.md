@@ -116,6 +116,64 @@ LIMIT <page size>
 OFFSET <page size * page index>
 ```
 
+## JSONB in PostgreSQL 
+JSONB columns in PostgreSQL allows to store and query JSON (JavaScript Object Notation) data efficiently. PostgreSQL provides various functions and operators to interact with JSONB data. 
+
+Creating a Table with JSONB Column
+```sql
+CREATE TABLE my_table (
+    id SERIAL PRIMARY KEY,
+    data JSONB
+);
+```
+
+Inserting data
+```sql
+INSERT INTO my_table (data) VALUES 
+('{"name": "John", "age": 30, "address": {"city": "New York", "zip": "10001"}}'),
+('{"name": "Jane", "age": 25, "address": {"city": "San Francisco", "zip": "94105"}}');
+```
+
+Selecting a Specific JSON Field
+```sql
+SELECT data->'name' AS name FROM my_table;
+```
+
+Selecting a Nested JSON Field
+```sql
+SELECT data->'address'->>'city' AS city FROM my_table;
+```
+
+Filtering rows
+```sql
+SELECT * FROM my_table WHERE data->>'name' = 'John';
+```
+
+Updating a Specific JSON Field
+```sql
+UPDATE my_table SET data = jsonb_set(data, '{age}', '31') WHERE data->>'name' = 'John';
+```
+
+Removing a JSON Field
+```sql
+UPDATE my_table SET data = data - 'phone';
+```
+
+Grouping by JSON Field
+```sql
+SELECT data->>'city' AS city, COUNT(*) FROM my_table GROUP BY data->>'city';
+```
+
+Unnesting JSON Arrays (convert each item in array to single row)
+```sql
+SELECT jsonb_array_elements(order_data->'items') AS item FROM orders;
+```
+
+Converting JSONB to Text
+```sql
+SELECT data::TEXT FROM my_table;
+```
+
 ### Clear table
 The TRUNCATE command is used to delete the complete data from the table. Is the fastest way to clear a table is to execute the TRUNCATE statement TABLE. Because this is a very low operation level (at the level of data blocks, not table rows), it is impossible to indicate the rows to be deleted. WITH for the same reason, it is impossible to truncate a related table with other tables, even if they are empty, which is for sure they do not contain references to the primary keys being deleted.
 
