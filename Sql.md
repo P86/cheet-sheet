@@ -1,5 +1,46 @@
 # SQL
 
+### Create table
+```sql
+CREATE TABLE <table_name> (
+    <first_column_name> <first_column_type>,
+    <second_column_name> <second_column_type>,
+    ...
+)
+```
+
+### Inserting data
+```sql
+INSERT INTO <table_name> (<first_column_name>, <second_column_name>)
+VALUES ('first_column_value', 'second_column_value'), 
+       ('another_first_column_value', 'another_second_column_value')
+```
+
+### Selecting data
+```sql
+SELECT <first_column_name>, <second_column_name> FROM <table_name>
+```
+
+Use `*` instead of column names to select all columns from table.
+
+Also column names can be aliased with `AS` keyword.
+
+```sql
+SELECT <first_column_name> AS <new_name> FROM <table_name>
+```
+
+[Math operators](https://www.geeksforgeeks.org/arithmetic-operators-in-postgresql/) can be used on values during selection
+
+```sql
+SELECT <first_column_name> + <second_column_name> AS addition_result FROM <table_name>
+```
+
+[String operators](https://www.postgresql.org/docs/9.1/functions-string.html) allows to manupulate strings during selection
+
+```sql
+SELECT <first_column_name> || <second_column_name> AS concatenated_strings FROM <table_name>
+```
+
 ### Create index 
 ```sql
 CREATE INDEX <name> ON <table> (<column>)
