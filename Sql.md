@@ -94,6 +94,41 @@ CREATE TABLE <table> (
 ```
 There is no need to set `id` when inserting data to table, database engine will do this automatically.
 
+Create foreign key column
+```sql
+CREATE TABLE <table> (
+    ...
+    <relation_table>_id INTEGER REFERENCES <table>(id)
+)
+```
+
+
+### Joining records from other table
+```sql
+SELECT <first_table>.<first_column>, <first_table>.<second_column>, <second_table>.<first_column> FROM <first_table>
+JOIN <second_table> ON <frist_table>.<second_table>_id = <second_table>.id
+```
+
+Aliases also can be used here  
+```sql
+SELECT ft.<first_column>, ft.<second_column>, st.<first_column> 
+FROM <first_table> as ft 
+JOIN <second_table> as st ON ft.<second_table>_id = st.id
+```
+
+There is a 4 types of join:
+- JOIN (INNER): Returns records that have matching values in both tables
+- LEFT JOIN (OUTER): Returns all records from the left table, and the matched records from the right table
+- RIGHT JOIN (OUTER): Returns all records from the right table, and the matched records from the left table
+- FULL JOIN (OUTER): Returns all records when there is a match in either left or right table
+
+Join statements can contain additional, even complex conditions
+```sql
+SELECT *
+FROM <first_table> ft
+LEFT JOIN <second_table> st ON st.id = ft.<second_table>_id AND st.<second_column> IS NOT NULL;
+```
+
 ### Create index 
 ```sql
 CREATE INDEX <name> ON <table> (<column>)
