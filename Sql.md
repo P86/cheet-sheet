@@ -102,7 +102,6 @@ CREATE TABLE <table> (
 )
 ```
 
-
 ### Joining records from other table
 ```sql
 SELECT <first_table>.<first_column>, <first_table>.<second_column>, <second_table>.<first_column> FROM <first_table>
@@ -127,6 +126,58 @@ Join statements can contain additional, even complex conditions
 SELECT *
 FROM <first_table> ft
 LEFT JOIN <second_table> st ON st.id = ft.<second_table>_id AND st.<second_column> IS NOT NULL;
+```
+
+### Grouping and aggregation
+Grouping reduces many rows down to fewer rows, done by `GROUP BY` keyword. Aggregation reduces many values down to one, done by using aggregate functions like `SUM`, `MAX`.
+
+```sql
+SELECT <column>
+FROM <table>
+GROUP BY <column>
+```
+Column that is not used in `GROUP BY` statement or aggregate function can't be used in `SELECT` statement. 
+
+Combining grouping and aggregation
+```sql
+SELECT <column>, COUNT(<second_column>)
+FROM <table>
+GROUP BY <column>
+```
+
+Filtering on groups 
+`HAVING` is used to filter grouped results. Given example will group results by <column> and count values <second_column> but return only results that have <second_column> count larger than given value.
+```sql
+SELECT <column>, COUNT(<second_column>)
+FROM <table>
+GROUP BY <column>
+HAVING COUNT(<second_column>) > <value>
+```
+
+### Sorting records
+To sort records use `ORDER BY` keyword with optional keyword `asc` (ascending) or `desc` (descending). Sorting by multiple columns is supported.
+```sql
+SELECT <column>
+FROM <table>
+ORDER BY <second_column> [<asc | desc>], <third_column> [<asc | desc>], ...
+```
+
+### Limiting and skipping results
+To skip some records from the begining of results use `OFFSET`. To limit number of results use `LIMIT`.
+Given example will take 5 records and skip first 10 records
+```sql
+SELECT <column>
+FROM <table>
+LIMIT 5
+OFFSET 10
+```
+
+It is usefull when you want to select one record from ordered set.
+```sql
+SELECT *
+FROM <table>
+ORDER BY <column>
+LIMIT 1
 ```
 
 ### Create index 
