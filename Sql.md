@@ -180,6 +180,27 @@ ORDER BY <column>
 LIMIT 1
 ```
 
+### Unions, intersections and sets
+The UNION operator is used to combine the result-set of two or more SELECT statements. Every SELECT statement within UNION must have the same number of columns. The columns must also have similar data types. 
+```sql
+(
+    SELECT ...
+)
+UNION
+(
+    SELECT ...
+)
+```
+If both sets contains same row the duplicated row will deduplicated.
+
+Other similar keywords (with same syntax to `UNION`):
+- `UNION ALL` - Join together results of two queries.
+- `INTERSECT ALL` - Find the rows common in the results of two queries. Remove duplicates.
+- `INTERSECT ALL` - Find the rows common in the results of two queries.
+- `EXCEPT` - Find the rows that are present in first query but not second query. Remove duplicates.
+- `EXCEPT ALL` - Find the rows that are present in first query but not second query.
+
+
 ### Create index 
 ```sql
 CREATE INDEX <name> ON <table> (<column>)
