@@ -258,6 +258,32 @@ FROM <table>
 WHERE <second_column> = (select <second_column> from <second_table> where <table>.<column> = <second_table>.<second_column>)
 ```
 
+### Distinct values
+Distinct allow to returns set of distincted values. `DISTINCT` can be perfomed on multiple columns then is returns unique combination of given columns.
+```sql
+SELECT DISTINCT <column>, <another_column>
+FROM <table>
+```
+
+### Greatest and least value
+`GREATEST` allows to return greatest value from multiple columns for each row (don't confuse with `MAX` which is aggregate function).
+```sql
+SELECT GREATEST(<column>, <another_column>) 
+FROM <table>
+```
+Oposite for `GREATEST` is `LEAST` it returns least value from multiple columns for each row.
+
+### Case
+`CASE` allows to introduce logic in select statement.
+```sql
+SELECT <column>, 
+CASE 
+   WHEN <another_column> > <value> THEN 'HIGH'
+   WHEN <another_column> < <another value> THEN 'MEDIUM'
+   else 'CHEAP' 
+FROM <table>
+```
+
 ### Create index 
 ```sql
 CREATE INDEX <name> ON <table> (<column>)
