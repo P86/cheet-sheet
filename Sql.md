@@ -200,6 +200,63 @@ Other similar keywords (with same syntax to `UNION`):
 - `EXCEPT` - Find the rows that are present in first query but not second query. Remove duplicates.
 - `EXCEPT ALL` - Find the rows that are present in first query but not second query.
 
+### Subqueries
+Subquery is an query nested in query.
+
+Subquery can be source of:
+- values
+- rows
+- columns
+
+Subquery in `SELECT` statement.
+```sql
+SELECT <column>, (SELECT ...)
+FROM <table>
+```
+
+Subquery in `FROM` statement.
+```sql
+SELECT <column>
+FROM (SELECT ...) as <alias> --subquery must have allias applied to it
+```
+
+Subquery in `JOIN` statement.
+```sql
+SELECT <column>
+FROM <table>
+JOIN (SELECT ...) as <alias>
+```
+
+Subquery in `WHERE` statement.
+```sql
+SELECT <column>
+FROM <table>
+WHERE <second_column> IN (SELECT ...)
+```
+
+Subqueries with `WHERE` can be combined with `ALL` and `ANY` keywords.
+
+Return records that <second_column> value is greater that ALL values returned from subquery.
+```sql
+SELECT <column>
+FROM <table>
+WHERE <second_column> > ALL (SELECT ...)
+```
+
+Return records that <second_column> value is greater than ANY values returned from subquery.
+```sql
+SELECT <column>
+FROM <table>
+WHERE <second_column> > ANY (SELECT ...)
+```
+* `SOME` is alias for `ANY`
+
+Subqueries can be correlated, nested query can use data from outer query. In given example it selects data based on value of <column> from outer query
+```sql
+SELECT <column>
+FROM <table>
+WHERE <second_column> = (select <second_column> from <second_table> where <table>.<column> = <second_table>.<second_column>)
+```
 
 ### Create index 
 ```sql
