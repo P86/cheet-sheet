@@ -3,7 +3,7 @@ Writing computer software is one of the purest creative activities in the histor
 
 ***Complexity is anything realted to the structure of a software system that makes it hard to understand and modify the system.***
 
-Complexity isn't caused by a single catastrophic error; it accumulates in lots of smal jchunks.
+Complexity isn't caused by a single catastrophic error; it accumulates in lots of smal chunks.
 
 ## Symptoms of complexity
 #### Change amplification
@@ -17,6 +17,14 @@ Cognitive load refers to how much a developer needs to know in order to complete
 
 #### Unknown unknowns
 It occures when it not obvious which pieces of code must be modified to complete task, of what information developer must have to carry out the task sucessfuly.
+
+## Causes of complexity
+### Dependencies
+Dependency exists when one piece of code canno't be understood and modified in isolation eg. the code relates in some way to other code and the other code must be considered and/or modified when code is changed. 
+Dependencies are fundamental part of software and can't be completelty eliminated. In fact, we intentionaly introduce depencencies as part of the software design process. 
+
+### Obscurity
+Obscurity occurs when iportant information is not obvious. A simple example is a variable name that is so generic that it dosen't carry much usefull information. 
 
 ## Working code Isn't Enough
 #### Tactical programming 
