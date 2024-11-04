@@ -66,11 +66,13 @@ db.<collection>.insertOne({...})
 db.<collection>.insertMany([...])
 ```
 
-### Get all documents in collection
+### Get documents in collection
 
 ```
 db.<collection>.find(<filter>, <options>)
 ```
+
+Find does not return all documents it returns a cursor to collection that can be iterated. So in JS it can be `db.<collection>.find().forEach((document) => {...})`
 
 ### Get single document from collection
 
@@ -113,4 +115,78 @@ db.<collection>.deleteOne(<filter>, <options>)
 
 ```
 db.<collection>.deleteMany(<filter>, <options>)
+```
+
+### Limit data returned to client
+
+As in SQL query can specify which data should be returned MongoDB uses `Projection` to select subset of fields from document.
+
+```
+db.<collection>.findOne(<filter>, {<field> : 1})
+```
+
+0 - don't include data
+1 - include data
+
+Projection happens in MongoDB serwer so should be used to limit data send over the wire
+
+### Accessing structured data
+
+```
+db.<collection>.findOne(<filter>).<nested property>
+```
+
+### Filter by nested field
+
+```
+db.<collection>.find({ "<field>.<nested field>": "<value>"})
+```
+
+### Remove database
+
+```
+use <database name>
+db.dropDatabase()
+```
+
+### Remove collection
+
+```
+db.<collection>.drop()
+```
+
+### Data Types
+
+- `Text` eg. "Test"
+- `Boolean` eg. `true` or `false`
+- `Nmber`
+  - `Integer` - 32 bits integer values
+  - `NumberLong` - 64 bits integer values
+  - `NumberDecimal` - store high precision decimal values
+- `ObjectId` eg. ObjectId('...')
+- `ISODate` - date, time and timestamps
+- `Array` - just JSON array
+- `Object` - just JSON Object
+
+### Relations
+
+- For strong one-to-one relation is recommended to use nested (embeded) document not separate collection.
+- For one-to-many relations is also recommended to use nested (embeded) document. But there are cases when data should be in separate collections.
+  For example if there is a need to load documents from one collection only (without related documents) or collections are huge and from performance reasons document with all related data canot be loaded.
+- For many-to-many relations both ways can be used. When related data can be duplicated and are basically a snapshot of data that never change then can be embeded but when related data always should be up to date then reference approach is recommended.
+
+For more details see https://www.udemy.com/course/mongodb-the-complete-developers-guide/learn/lecture/11758286#overview
+
+Two collections can be joined using `$lookup` operator. It oerforms a left outer join to a collection in the same database to filter in documents from the "joined" collection for processing. The `$lookup` stage adds a new array field to each input document. The new array field contains the matching documents from the "joined" collection.
+
+```json
+{
+   $lookup:
+     {
+       from: <collection to join>,
+       localField: <field from the input documents>,
+       foreignField: <field from the documents of the "from" collection>,
+       as: <output array field>
+     }
+}
 ```
