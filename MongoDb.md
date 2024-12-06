@@ -142,6 +142,21 @@ db.<collection>.findOne(<filter>).<nested property>
 db.<collection>.find({ "<field>.<nested field>": "<value>"})
 ```
 
+### Comparision operators (https://www.mongodb.com/docs/manual/reference/operator/query-comparison/)
+Comparision operators like `$eq`, `$ne`, `$gt`, `$lt` can be used in `find` and `findOne` to filter results.
+```
+db.<collection>.findOne({ <field>: {$eq <value>}})
+```
+
+### Logical operators 
+Logical operators like `$and`, `$or` etc. allows to join conditions 
+```
+db.<collection>.findOne({ $and: [ { <field>: { $ne: <value> } }, { <field>: { $exists: <value> } } ])
+```
+
+### Element operators (https://www.mongodb.com/docs/manual/reference/operator/query-element/)
+Element operators: `$exists`, `$type` element operators return data based on field existence or data types.
+
 ### Remove database
 
 ```
@@ -190,3 +205,6 @@ Two collections can be joined using `$lookup` operator. It oerforms a left outer
      }
 }
 ```
+
+### Cursor
+Cursor is returned by `find()`function. Cursor is basically a pointer that has query stored and allows to get quickly next portion of data.
