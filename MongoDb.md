@@ -86,7 +86,7 @@ db.<collection>.findOne(<filter>, <options>)
 db.<collection>.updateOne(<filter>, <data>, <options>)
 ```
 
-Document update require to use special convenction to instruct MongoDB how exactly update data.
+Document update require to use special convention to instruct MongoDB how exactly update data.
 So If you want set field in document the `data` param must contain special operator `$set` that will contain document to update.
 
 ```
