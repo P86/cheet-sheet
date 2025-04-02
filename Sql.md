@@ -394,8 +394,8 @@ If no parition is defined in `OVER()` clausule then whole table is an parition (
 ### SQL pagination
 If you application need to return rows in portions aka paginated then followed query can be used to fetch portion of rows and count of all rows
 ```sql
-SELECT *, COUNT(*) OVER() as total_rows
-FROM (<query returns all data>)
+SELECT <alias>.*, COUNT(*) OVER() as total_rows
+FROM (<query returns all data>) as <alias>
 LIMIT <page size>
 OFFSET <page size * page index>
 ```
