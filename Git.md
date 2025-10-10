@@ -70,7 +70,7 @@ git branch -vv
 git branch -d <name>
 ```
 
-### To sort branches by commit date
+### To sort branches by commit date (to see latest branches)
 ```
 git branch --sort=-committerdate
 ```
