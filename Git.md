@@ -98,3 +98,42 @@ git cherry-pick <commit sha>
 git cherry-pick <start commit sha>..<end commit sha>
 ```
   
+## Worktree
+Git worktree lets you check out multiple branches simultaneously in different directories, all sharing the same repository. It allows to review PRs or work on hotfixes without disrupting your current work — no need to stash or commit incomplete changes. Each worktree is isolated, allowing you to run tests, review code, or fix bugs in one directory while continuing development in another, eliminating context switching.
+
+### Add a new worktree
+```
+git worktree add <path> <branch-name>
+```
+
+### Add a new worktree with a new branch
+```
+git worktree add <path> -b <new-branch-name>
+```
+
+### Add a new worktree from remote branch
+```
+git worktree add <path> <remote>/<branch-name>
+```
+
+### List all worktrees
+```
+git worktree list
+```
+
+### Remove a worktree
+```
+git worktree remove <path>
+```
+
+### Force remove a worktree
+```
+git worktree remove --force <path>
+```
+
+### Clean up deleted worktrees
+```
+git worktree prune
+```
+
+If worktree folder was deleted git still keep it as worktree but it is stale, this command will cleanup stale worktrees.
