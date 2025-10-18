@@ -75,6 +75,15 @@ git branch -d <name>
 git branch --sort=-committerdate
 ```
 
+### Create tag
+```
+git tag <tag name>
+```
+Then push tag 
+```
+git push origin <tag name>
+```
+
 ### Display changes
 ```
 git log
