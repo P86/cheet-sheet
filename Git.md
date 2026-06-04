@@ -146,3 +146,14 @@ git worktree prune
 ```
 
 If worktree folder was deleted git still keep it as worktree but it is stale, this command will cleanup stale worktrees.
+
+### Worktree workflow
+Checkout bare repo:
+```
+git clone --bare https://github.com/P86/<my-project>.git <my-project>/.git
+```
+
+Cd into <my-project> folder and start creaing worktrees as normal. Bare repo contains only git database not acutal code. Code will be in worktree folder. This apporach allows to mantain clean main folder with worktree folders inside.
+
+Source: https://www.youtube.com/watch?v=99v51wRl7zE
+
